@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextMedium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textColor">@color/text_number_color</item>
+        <item name="android:paddingRight">@dimen/_4sdp</item>
+        <item name="android:paddingLeft">@dimen/_4sdp</item>
+        <item name="android:layout_marginTop">@dimen/_8sdp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_marginBottom">@dimen/_8sdp</item>
+    </style>
+
+    <style name="TextLarge" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_22ssp</item>
+        <item name="android:textColor">@color/text_number_color</item>
+    </style>
+
+    <style name="TextProgressCountStyle">
+        <item name="android:layout_marginBottom">@dimen/_8sdp</item>
+        <item name="android:textSize">@dimen/_45ssp</item>
+        <item name="android:textColor">@color/count_txt_color</item>
+    </style>
+
+    <style name="TextProgressSecondStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:layout_marginBottom">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/count_txt_color</item>
+    </style>
+
+
+    <style name="TextMainTitleStyle" parent="TextLarge">
+        <item name="android:textSize">@dimen/_16ssp</item>
+    </style>
+
+    <style name="TextSmall" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_medium_500</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/sign_title_txt_color</item>
+    </style>
+
+    <style name="TextSmallMini" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_medium_500</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/hintColor</item>
+    </style>
+
+    <style name="TextTitleSignUpStyle" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_22ssp</item>
+        <item name="android:layout_marginLeft">@dimen/_15sdp</item>
+        <item name="android:layout_marginRight">@dimen/_15sdp</item>
+        <item name="android:textColor">@color/text_number_color</item>
+        <item name="android:layout_marginTop">@dimen/_25sdp</item>
+    </style>
+
+    <style name="SearchTextViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:drawableEnd">@drawable/ic_search_icon</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:inputType">textFilter</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:paddingStart">@dimen/_5sdp</item>
+        <item name="android:paddingEnd">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/sign_title_txt_color</item>
+        <item name="android:textColorHint">@color/sign_title_txt_color</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+    <style name="RatingBarStyle">
+        <item name="srb_clearRatingEnabled">false</item>
+        <item name="srb_clickable">false</item>
+        <item name="srb_drawableEmpty">@drawable/start_empty</item>
+        <item name="srb_drawableFilled">@drawable/star_filled</item>
+        <item name="srb_isIndicator">false</item>
+        <item name="srb_minimumStars">1</item>
+        <item name="srb_numStars">5</item>
+        <item name="srb_scrollable">true</item>
+        <item name="srb_starHeight">@dimen/_14sdp</item>
+        <item name="srb_starPadding">@dimen/_3sdp</item>
+        <item name="srb_starWidth">@dimen/_14sdp</item>
+        <item name="srb_stepSize">0.5</item>
+    </style>
+
+    <style name="ImageViewDefStyle">
+        <item name="android:padding">@dimen/_4sdp</item>
+        <item name="android:layout_width">@dimen/_42sdp</item>
+        <item name="android:layout_height">@dimen/_42sdp</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    <style name="ClickableImageViewStyle" parent="ImageViewDefStyle">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="TopRoundedCornerShape">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_25sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_25sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_25sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_25sdp</item>
+    </style>
+
+    <style name="TopRoundedOrdersCornerShape">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_25sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_25sdp</item>
+    </style>
+
+    <style name="ProfileTopRoundedCornerShape">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_25sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_25sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_25sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_25sdp</item>
+    </style>
+
+    <style name="RoundedCornerShape" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_12sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_12sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_12sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_12sdp</item>
+    </style>
+
+    <style name="RoundCardViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">@dimen/_32sdp</item>
+        <item name="cardPreventCornerOverlap">true</item>
+        <item name="cardElevation">@dimen/_3sdp</item>
+    </style>
+
+    <style name="RectangleCardViewWithCorner" parent="RoundCardViewStyle">
+        <item name="cardCornerRadius">@dimen/_12sdp</item>
+        <item name="cardElevation">@dimen/_3sdp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CircleButtonStyle" parent="RoundCardViewStyle">
+        <item name="android:layout_width">@dimen/_44sdp</item>
+        <item name="android:layout_height">@dimen/_44sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_8sdp</item>
+        <item name="cardCornerRadius">@dimen/_22sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_20sdp</item>
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="CircleButtonStyleWithConfigurationStyle" parent="CircleButtonStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/text_number_color</item>
+        <item name="fontFamily">@font/gilroy_bold_700</item>
+        <item name="android:drawableRight">@drawable/ic_arrow_grey</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+        <item name="android:background">@null</item>
+        <item name="android:backgroundTint">@color/jobs_item_color</item>
+    </style>
+
+    <style name="CircleButtonEditWithConfigurationStyle" parent="CircleButtonStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/_55sdp</item>
+        <item name="textSize">@dimen/_13ssp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/text_number_color</item>
+        <item name="fontFamily">monospace</item>
+        <item name="android:drawableRight">@drawable/ic_arrow_grey</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+        <item name="android:background">@null</item>
+        <item name="android:backgroundTint">@color/settings_background_color</item>
+    </style>
+
+    <style name="CircleButtonStyleWithoutDrawableLeftStyle" parent="CircleButtonStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/_65sdp</item>
+        <item name="textSize">@dimen/_13ssp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+        <item name="android:background">@null</item>
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
+
+    <style name="CircleButtonImageStyle" parent="ImageViewDefStyle">
+        <item name="android:layout_width">@dimen/_24sdp</item>
+        <item name="android:layout_height">@dimen/_24sdp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">@dimen/_2sdp</item>
+        <item name="android:contentDescription">@string/app_name</item>
+    </style>
+
+    <style name="CircleEditButtonStyle" parent="CircleButtonImageStyle">
+        <item name="android:background">?android:selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="SearchLayoutStyle">
+        <item name="boxCornerRadiusBottomEnd">@dimen/_10sdp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_10sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_10sdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_10sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="endIconDrawable">@drawable/ic_clear</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="PopToBackImageViewStyle" parent="ImageViewDefStyle">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:layout_width">@dimen/_40sdp</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+        <item name="android:clickable">true</item>
+        <item name="tint">@color/text_number_color</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:src">@drawable/ic_back</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="LogoMardexImageStyle" parent="ImageViewDefStyle">
+        <item name="android:layout_width">@dimen/_80sdp</item>
+        <item name="android:layout_height">@dimen/_80sdp</item>
+        <item name="android:contentDescription">@string/app_name</item>
+        <item name="android:src">@drawable/ic_logo</item>
+        <item name="android:elevation">@dimen/_10sdp</item>
+        <item name="elevation">@dimen/_10sdp</item>
+        <item name="android:layout_marginTop">@dimen/_55sdp</item>
+    </style>
+
+    <!--Log in-->
+
+    <style name="InputEditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_50sdp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="hintTextColor">@color/hintColor</item>
+    </style>
+
+    <style name="MaskedEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:drawablePadding">@dimen/_10sdp</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:inputType">numberPassword|phone</item>
+        <item name="singleLine">true</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:textCursorDrawable">@drawable/color_cursor</item>
+        <item name="allowed_chars">1234567890</item>
+        <item name="keep_hint">true</item>
+        <item name="mask">+998(##)###-##-##</item>
+    </style>
+
+    <style name="ClickableLayoutStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?android:selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="TextMiddleTitlesSignUpStyle" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_20sdp</item>
+        <item name="android:textColor">@color/sign_title_txt_color</item>
+        <item name="android:layout_marginTop">@dimen/_25sdp</item>
+    </style>
+
+    <style name="TextMiddleTitlePhoneSignUpStyle" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/sign_title_txt_color</item>
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+    </style>
+
+    <style name="TextDescSendSMSPhoneRestoreStyle" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sign_title_txt_color</item>
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+    </style>
+
+    <!--Edit text  sign up-->
+    <style name="InputEditTextCardViewStyle" parent="CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:layout_marginTop">@dimen/_7sdp</item>
+        <item name="cardCornerRadius">@dimen/_20sdp</item>
+        <item name="backgroundTint">@color/billing_back</item>
+        <item name="cardElevation">@dimen/_3sdp</item>
+    </style>
+
+    <style name="InputEditTextLayoutStyle">
+        <item name="backgroundTint">@color/new_green</item>
+        <item name="android:padding">@dimen/_6sdp</item>
+        <item name="hintTextAppearance">@style/TextSmall</item>
+        <item name="hintTextColor">@color/grey_text</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_number_color</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="startIconTint">@color/hint_text_color</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="android:textColorHint">@color/hint_text_color</item>
+    </style>
+
+
+    <style name="InputEditTextMStyle">
+        <item name="android:fontFamily">@font/gilroy_medium_500</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:drawablePadding">@dimen/_5sdp</item>
+        <item name="android:textColorHint">@color/hint_text_color</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="textSize">@dimen/_15ssp</item>
+    </style>
+
+    <style name="InputMaskedEditTextPhoneStyle" parent="InputEditTextMStyle">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:inputType">numberPassword|phone</item>
+        <item name="mask">+998(##)###-##-##</item>
+        <item name="singleLine">true</item>
+        <item name="android:textColor">@color/text_number_color</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:fontFamily">@font/gilroy_medium_500</item>
+        <item name="allowed_chars">1234567890</item>
+        <item name="keep_hint">false</item>
+        <item name="boxStrokeColor">@color/white</item>
+    </style>
+
+    <style name="InputMaskedEditTextFullNameStyle" parent="InputEditTextMStyle">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColor">@color/text_number_color</item>
+        <item name="singleLine">true</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:textCursorDrawable">@drawable/color_cursor</item>
+    </style>
+
+    <style name="InputMaskedEditTextPasswordStyle" parent="InputEditTextMStyle">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="singleLine">true</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:textCursorDrawable">@drawable/color_cursor</item>
+    </style>
+
+    <style name="ButtonNextStyle" parent="TextMedium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="textSize">@dimen/_18ssp</item>
+        <item name="android:padding">@dimen/_15sdp</item>
+        <item name="cornerRadius">@dimen/_20sdp</item>
+        <item name="android:layout_marginTop">@dimen/_50sdp</item>
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ButtonNextStyleIntro" parent="ButtonNextStyle">
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+    </style>
+
+    <style name="ProfileButtonStyle" parent="TextMedium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingTop">@dimen/_14sdp</item>
+        <item name="android:paddingBottom">@dimen/_14sdp</item>
+        <item name="android:paddingStart">@dimen/_22ssp</item>
+        <item name="android:paddingEnd">@dimen/_22ssp</item>
+        <item name="android:layout_marginStart">@dimen/_5sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_5sdp</item>
+        <item name="cornerRadius">@dimen/_20sdp</item>
+        <item name="backgroundTint">@color/main_button_color</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ButtonEnterStyle" parent="TextMedium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="textSize">@dimen/_18ssp</item>
+        <item name="android:padding">@dimen/_22sdp</item>
+        <item name="cornerRadius">@dimen/_20sdp</item>
+        <item name="android:layout_marginTop">@dimen/_30sdp</item>
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_20sdp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AppVersionTextStyle" parent="TextMedium">
+        <item name="android:textColor">@color/AppVersionTextColor</item>
+        <item name="textSize">@dimen/_15ssp</item>
+        <item name="android:layout_marginTop">@dimen/_50sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_20sdp</item>
+    </style>
+
+    <style name="AppVersionTextStyleIntro" parent="AppVersionTextStyle">
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_15sdp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+
+    <style name="IfYourAccountAvailableSignUpStyle" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:textColor">@color/text_number_color</item>
+        <item name="android:layout_marginTop">@dimen/_25sdp</item>
+    </style>
+
+    <style name="ForgotYouPassword" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="ResetPassword" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="GoSignInTextStyle" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:textColor">@color/new_green</item>
+        <item name="drawableTint">@color/new_green</item>
+        <item name="android:drawablePadding">@dimen/_5sdp</item>
+        <item name="android:layout_marginTop">@dimen/_7sdp</item>
+    </style>
+
+    <style name="LinearLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!--List of demand images -->
+
+    <style name="TextTitleListOfImagesStyle" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_25ssp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/text_number_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginRight">@dimen/_30sdp</item>
+        <item name="android:layout_marginLeft">@dimen/_30sdp</item>
+        <item name="android:layout_marginTop">@dimen/_20sdp</item>
+    </style>
+
+
+    <style name="ListOfImagesTextCardViewStyle" parent="CardView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/_30sdp</item>
+        <item name="cardCornerRadius">@dimen/_20sdp</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="cardElevation">@dimen/_3sdp</item>
+    </style>
+
+    <style name="ListOfImagesTextCardViewStyle2" parent="CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_20sdp</item>
+        <item name="android:layout_marginTop">@dimen/_20sdp</item>
+        <item name="cardCornerRadius">@dimen/_20sdp</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="cardElevation">@dimen/_3sdp</item>
+    </style>
+
+    <style name="TextDescListOfImagesStyle" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/sign_title_txt_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginRight">@dimen/_30sdp</item>
+        <item name="android:layout_marginLeft">@dimen/_30sdp</item>
+        <item name="android:layout_marginTop">@dimen/_20sdp</item>
+    </style>
+
+    <style name="TextListOfImageStyle" parent="TextMedium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_number_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/_5sdp</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+    </style>
+
+    <style name="ButtonNextConditionsStyle" parent="TextMedium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="textSize">@dimen/_18ssp</item>
+        <item name="android:padding">@dimen/_22sdp</item>
+        <item name="cornerRadius">@dimen/_20sdp</item>
+        <item name="android:layout_marginTop">@dimen/_30sdp</item>
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_20sdp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ProfileCardsStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginTop">@dimen/_13sdp</item>
+    </style>
+
+    <style name="FloatActionButtonCamera" parent="Widget.MaterialComponents.ExtendedFloatingActionButton">
+        <item name="android:layout_width">@dimen/_50sdp</item>
+        <item name="android:layout_height">@dimen/_50sdp</item>
+        <item name="layout_anchorGravity">bottom|right|end</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:layout_marginBottom">@dimen/_10sdp</item>
+        <item name="fabCustomSize">@dimen/_50sdp</item>
+    </style>
+
+    <style name="FloatActionPrevButtonCamera" parent="FloatActionButtonCamera">
+        <item name="android:layout_width">@dimen/_45sdp</item>
+        <item name="android:layout_height">@dimen/_45sdp</item>
+        <item name="android:layout_marginStart">@dimen/_15sdp</item>
+        <item name="android:layout_marginLeft">@dimen/_15sdp</item>
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+        <item name="fabCustomSize">@dimen/_45sdp</item>
+    </style>
+
+    <!--Camera fragment: frameStyles(ramka)    -->
+    <style name="RectangleBoxRelativeViewStyle">
+        <item name="android:padding">@dimen/_5sdp</item>
+        <item name="android:layout_width">@dimen/_320sdp</item>
+        <item name="android:layout_height">@dimen/_200sdp</item>
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_15sdp</item>
+
+    </style>
+
+    <style name="RectangleWithFaceBoxRelativeViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="EdgeFrameImageStyle">
+        <item name="android:layout_width">@dimen/_30sdp</item>
+        <item name="android:layout_height">@dimen/_30sdp</item>
+        <item name="tint">@color/green</item>
+    </style>
+
+    <style name="TextCameraTitleStyle" parent="TextSmall">
+        <item name="background">@color/black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="CameraDescCardViewOutOfTitleTextStyle" parent="CardView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">@dimen/_20sdp</item>
+        <item name="android:layout_marginLeft">@dimen/_20sdp</item>
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_20sdp</item>
+        <item name="android:layout_marginRight">@dimen/_20sdp</item>
+        <item name="cardElevation">@dimen/_3sdp</item>
+    </style>
+
+    <!---->
+    <!--Show capture photo-->
+    <style name="TextTitleShowCapturePhotoStyle" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_20ssp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+    </style>
+
+    <style name="ShowCapturePhotoCardViewStyle" parent="CardView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/_200sdp</item>
+        <item name="cardCornerRadius">@dimen/_20sdp</item>
+        <item name="strokeWidth">@dimen/_10sdp</item>
+        <item name="strokeColor">@color/white</item>
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_15sdp</item>
+        <item name="android:layout_marginRight">@dimen/_15sdp</item>
+
+        <item name="cardElevation">@dimen/_3sdp</item>
+    </style>
+
+    <style name="ButtonOkNextStyle" parent="ButtonNextStyle">
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+    </style>
+
+    <style name="ButtonAgainCaptureStyle" parent="ButtonNextStyle">
+        <item name="android:layout_marginTop">@dimen/_8sdp</item>
+    </style>
+
+    <!--CallNotificationDialog-->
+
+    <style name="CallNotificationDialogCardViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">@dimen/_18sdp</item>
+        <item name="cardElevation">@dimen/_3sdp</item>
+    </style>
+
+    <style name="ProgressCardViewStyle">
+        <item name="android:layout_width">@dimen/_80sdp</item>
+        <item name="android:layout_height">@dimen/_80sdp</item>
+        <item name="cardCornerRadius">@dimen/_100sdp</item>
+        <item name="cardElevation">@dimen/_3sdp</item>
+        <item name="elevation">0dp</item>
+        <item name="android:layout_marginTop">@dimen/_20sdp</item>
+    </style>
+
+
+    <style name="FrameLayoutBasicStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/_20sdp</item>
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_20sdp</item>
+        <item name="android:layout_marginRight">@dimen/_20sdp</item>
+        <item name="android:layout_marginTop">@dimen/_40sdp</item>
+    </style>
+
+
+    <style name="TextTitleCallNotificationDialogStyle" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:layout_marginLeft">@dimen/_20sdp</item>
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_20sdp</item>
+        <item name="android:layout_marginRight">@dimen/_20sdp</item>
+        <item name="android:layout_marginTop">@dimen/_70sdp</item>
+    </style>
+
+    <style name="ButtonMoreStyle" parent="TextMedium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="paddingStart">@dimen/_25sdp</item>
+        <item name="android:paddingTop">@dimen/_12sdp</item>
+        <item name="android:paddingBottom">@dimen/_12sdp</item>
+        <item name="android:paddingLeft">@dimen/_25sdp</item>
+        <item name="android:paddingRight">@dimen/_25sdp</item>
+        <item name="android:paddingEnd">@dimen/_25sdp</item>
+        <item name="cornerRadius">@dimen/_50sdp</item>
+        <item name="elevation">0dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/more_btn_txt_color</item>
+    </style>
+
+    <style name="TextDescCallNotificationDialogStyle" parent="TextMedium">
+        <item name="android:fontFamily">@font/gilroy_medium_500</item>
+        <item name="android:textSize">@dimen/_13sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start|left</item>
+        <item name="android:layout_marginRight">@dimen/_10sdp</item>
+        <item name="android:layout_marginLeft">@dimen/_10sdp</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+    </style>
+
+    <style name="TextPhotoTitleStyle" parent="TextTitleCallNotificationDialogStyle">
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_13sdp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_marginLeft">@dimen/_10sdp</item>
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:layout_marginRight">@dimen/_10sdp</item>
+        <item name="android:layout_marginTop">@dimen/_5sdp</item>
+    </style>
+
+
+    <style name="ViewPagerPhotosDialogStyle">
+        <item name="android:layout_margin">@dimen/_10sdp</item>
+
+    </style>
+
+    <style name="ButtonCancelStyle" parent="TextSmallMini">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:backgroundTint">@color/cancel_btn_back_color</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="paddingStart">@dimen/_40sdp</item>
+        <item name="android:paddingTop">@dimen/_8sdp</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+        <item name="android:paddingLeft">@dimen/_20sdp</item>
+        <item name="android:paddingRight">@dimen/_8sdp</item>
+        <item name="android:paddingEnd">@dimen/_8sdp</item>
+        <item name="cornerRadius">@dimen/_50sdp</item>
+        <item name="elevation">0dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ButtonAcceptStyle" parent="ButtonCancelStyle">
+        <item name="android:backgroundTint">@color/accept_btn_back_color</item>
+    </style>
+
+    <declare-styleable name="CircleSeekBar">
+        <attr name="csb_progress" format="integer" />
+        <attr name="csb_min" format="integer" />
+        <attr name="csb_max" format="integer" />
+        <attr name="csb_step" format="integer" />
+
+        <attr name="csb_thumbDrawable" format="reference" />
+        <attr name="csb_thumbSize" format="dimension" />
+
+        <attr name="csb_progressColor" format="color" />
+        <attr name="csb_progressWidth" format="dimension" />
+
+        <attr name="csb_arcColor" format="color" />
+        <attr name="csb_arcWidth" format="dimension" />
+
+        <attr name="csb_textSize" format="dimension" />
+        <attr name="csb_textColor" format="color" />
+
+        <attr name="csb_isShowText" format="boolean" />
+
+    </declare-styleable>
+
+
+    <style name="RootDialogConstraintLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/_55sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_100sdp</item>
+        <item name="paddingStart">@dimen/_20sdp</item>
+        <item name="android:paddingEnd">@dimen/_20sdp</item>
+        <item name="android:paddingTop">@dimen/_20sdp</item>
+        <item name="android:paddingStart">@dimen/_20sdp</item>
+        <item name="android:paddingBottom">@dimen/_20sdp</item>
+    </style>
+
+    <style name="WorkTitleTextStyle">
+        <item name="fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/_30sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_30sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+    </style>
+
+    <style name="DialogImageStyle">
+        <item name="android:layout_width">@dimen/_42sdp</item>
+        <item name="android:layout_height">@dimen/_42sdp</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+    </style>
+
+    <style name="DialogImageClientStyle" parent="DialogImageStyle">
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+    </style>
+
+    <style name="PriceTitleStyle" parent="PriceValueTextValueStyle">
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PriceValueTextValueStyle">
+        <item name="android:fontFamily">@font/gilroy_medium_500</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_number_color</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+    </style>
+
+    <style name="ScrollViewDialogStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_200sdp</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+    </style>
+
+    <style name="TextDescWorkDialogStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:fontFamily">@font/gilroy_medium_500</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/text_number_color</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+    </style>
+
+    <style name="TextPhotoDialogStyle" parent="PriceTitleStyle">
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">@dimen/_7sdp</item>
+    </style>
+
+    <style name="ViewPagerDialogStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/_5sdp</item>
+    </style>
+
+    <style name="ProgressConstraintLayoutDialogStyle">
+        <item name="android:layout_width">@dimen/_70sdp</item>
+        <item name="android:layout_height">@dimen/_70sdp</item>
+        <item name="android:layout_marginTop">@dimen/_20sdp</item>
+        <item name="android:background">@drawable/cl_progress_back</item>
+    </style>
+
+    <style name="ProgressBarStyle">
+        <item name="fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:layout_width">@dimen/_110sdp</item>
+        <item name="android:layout_height">@dimen/_110sdp</item>
+        <item name="elevation">@dimen/_40sdp</item>
+        <item name="android:padding">@dimen/_20sdp</item>
+    </style>
+
+    <style name="ElevationShadowStyle">
+        <item name="android:layout_width">@dimen/_90sdp</item>
+        <item name="android:layout_height">@dimen/_90sdp</item>
+    </style>
+
+    <style name="TabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@drawable/tab_selector</item>
+        <item name="tabTextAppearance">@style/TextMedium</item>
+        <item name="tabSelectedTextColor">@color/main_color</item>
+    </style>
+
+    <style name="ImageSplashStyle">
+        <item name="android:layout_width">@dimen/_100sdp</item>
+        <item name="android:layout_height">@dimen/_110sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_20sdp</item>
+    </style>
+
+    <style name="SheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <!--<item name="android:windowCloseOnTouchOutside">false</item>-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="CardVETEditFragmentStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/_7sdp</item>
+        <item name="android:layout_marginStart">@dimen/_15sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_15sdp</item>
+        <item name="cardCornerRadius">@dimen/_20sdp</item>
+        <item name="cardElevation">@dimen/_3sdp</item>
+    </style>
+
+    <style name="EditTextEditFragmentStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/_20sdp</item>
+        <item name="android:textColor">@color/sign_title_txt_color</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:background">@color/jobs_item_color</item>
+    </style>
+
+    <style name="ButtonSaveStyle" parent="TextMedium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:padding">@dimen/_20sdp</item>
+        <item name="cornerRadius">@dimen/_20sdp</item>
+        <item name="android:backgroundTint">@color/new_green</item>
+        <item name="android:layout_marginTop">@dimen/_30sdp</item>
+        <item name="android:layout_marginStart">@dimen/_15sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_15sdp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextTitleEditFragmentStyle" parent="TextMedium">
+        <item name="android:textSize">@dimen/_25ssp</item>
+        <item name="android:layout_width">@dimen/_200sdp</item>
+        <item name="android:textColor">@color/text_number_color</item>
+        <item name="android:layout_marginTop">@dimen/_12sdp</item>
+    </style>
+
+    <style name="TextDescEditFragmentStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:fontFamily">@font/gilroy_medium_500</item>
+        <item name="android:textColor">@color/sign_title_txt_color</item>
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+    </style>
+
+    <style name="PinViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:fontFamily">@font/gilroy_semi_bold_600</item>
+        <item name="android:textSize">@dimen/_28ssp</item>
+        <item name="android:inputType">number</item>
+        <item name="android:itemBackground">@android:color/transparent</item>
+        <item name="OtpItemCount">6</item>
+        <item name="OtpViewType">line</item>
+        <item name="android:textColor">@color/text_number_color</item>
+        <item name="OtpLineColor">@color/text_number_color</item>
+        <item name="android:longClickable">false</item>
+        <item name="android:textIsSelectable">false</item>
+        <item name="android:cursorVisible">false</item>
+    </style>
+
+</resources>

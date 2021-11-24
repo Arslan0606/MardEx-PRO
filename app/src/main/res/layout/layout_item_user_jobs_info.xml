@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_jobs"
+    style="@style/ProfileCardsStyle"
+    app:cardCornerRadius="@dimen/_20sdp"
+    app:cardElevation="@dimen/_3sdp"
+    app:layout_constraintTop_toBottomOf="@id/layout_balance"
+    app:shapeAppearance="@style/RoundedCornerShape">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/_10sdp"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_jobs_info"
+            style="@style/TextMedium"
+            android:gravity="start"
+            android:text="@string/my_jobs_"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/button_settings_jobs"
+            style="@style/CircleEditButtonStyle"
+            android:padding="0dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_circle_settings"
+            app:layout_constraintBottom_toBottomOf="@id/text_jobs_info"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_jobs_info" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_jobs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_jobs_info"
+            tools:itemCount="3"
+            tools:listitem="@layout/jobs_item_recycler" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_jobs"
+            style="@style/ProfileButtonStyle"
+            android:layout_width="0dp"
+            android:layout_margin="0dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/add_jobs"
+            app:cornerRadius="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/list_jobs"
+            app:layout_constraintRight_toRightOf="@id/list_jobs"
+            app:layout_constraintTop_toBottomOf="@id/list_jobs" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

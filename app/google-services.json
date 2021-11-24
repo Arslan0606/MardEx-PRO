@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "435599003195",
+    "project_id": "fir-for-push-2491f",
+    "storage_bucket": "fir-for-push-2491f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435599003195:android:113afa23625bf087eb161e",
+        "android_client_info": {
+          "package_name": "uz.star.mardexworker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "435599003195-nh41kf2ag4lf5imthlqp8vlkls9najbj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNGzb8SxMQ6uPx29Sdh_AwGifAzsT-wGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435599003195-nh41kf2ag4lf5imthlqp8vlkls9najbj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

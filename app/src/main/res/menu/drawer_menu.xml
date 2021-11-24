@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/editFragment2"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings"
+            app:showAsAction="always"
+            tools:ignore="AlwaysShowAction" />
+        <item
+            android:id="@+id/newsFragment"
+            android:icon="@drawable/ic_news"
+            android:title="@string/news"
+            app:showAsAction="always" />
+        <!--<item
+            android:id="@+id/menu_use"
+            android:icon="@drawable/ic_use"
+            android:title="@string/how_to_use"
+            app:showAsAction="always" />-->
+        <item
+            android:id="@+id/changeLanguageFragment"
+            android:icon="@drawable/ic_use"
+            android:title="@string/soft_lang"
+            app:showAsAction="always" />
+    </group>
+</menu>

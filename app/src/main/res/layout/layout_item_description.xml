@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ProfileCardsStyle"
+    app:cardCornerRadius="@dimen/_20sdp"
+    app:cardElevation="@dimen/_3sdp"
+    app:layout_constraintTop_toBottomOf="@id/layout_free_unfree"
+    app:shapeAppearance="@style/RoundedCornerShape"
+    tools:showIn="@layout/fragment_profile">
+
+    <LinearLayout
+        android:id="@+id/layout_description"
+        style="@style/ClickableLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_desc_info"
+            style="@style/TextMedium"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:gravity="start"
+            android:text="@string/about_me_" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_desc"
+            style="@style/TextSmall"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="start"
+            android:text="@string/temp_about" />
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

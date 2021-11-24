@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.screen.navigate_activity.NavigateActivity">
+
+    <com.yandex.mapkit.mapview.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/layout_navigate"
+        style="@style/CircleButtonStyle"
+        android:layout_marginBottom="@dimen/_30sdp"
+        app:cardBackgroundColor="@color/jobs_item_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/button_navigate"
+            style="@style/CircleButtonImageStyle"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_navigate" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/layout_back"
+        style="@style/CircleButtonStyle"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        app:cardBackgroundColor="@color/jobs_item_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageView
+            android:id="@+id/button_back"
+            style="@style/CircleButtonImageStyle"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back_" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

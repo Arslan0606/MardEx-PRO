@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutNotification"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:visibility="gone"
+    tools:context=".ui.screen.notification_activity.NotificationActivity"
+    tools:visibility="visible">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/p_root"
+        style="@style/RootDialogConstraintLayoutStyle"
+        android:layout_height="match_parent"
+        android:background="@drawable/back_dialog_call"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/progress_bar">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_title"
+            style="@style/TextLarge"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:textColor="@color/text_number_color"
+            android:textSize="@dimen/_18sdp"
+            app:fontFamily="@font/gilroy_semi_bold_600"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Arxitektor" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_work_title"
+            style="@style/WorkTitleTextStyle"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/text_number_color"
+            app:fontFamily="@font/gilroy_semi_bold_600"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_title"
+            tools:text="Archa ekishga va hovlini uborka qilish kerak" />
+
+        <ImageView
+            android:id="@+id/img_money"
+            style="@style/DialogImageStyle"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_money"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_work_title" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_p_m"
+            style="@style/PriceTitleStyle"
+            android:text="@string/cost"
+            app:layout_constraintStart_toEndOf="@+id/img_money"
+            app:layout_constraintTop_toTopOf="@+id/img_money" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_price"
+            style="@style/PriceValueTextValueStyle"
+            app:layout_constraintStart_toStartOf="@+id/txt_p_m"
+            app:layout_constraintTop_toBottomOf="@+id/txt_p_m"
+            tools:text="2.000.000 so'm" />
+
+<!--
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_more"
+            style="@style/ButtonMoreStyle"
+            android:backgroundTint="@color/more_btn_color"
+            android:text="@string/more"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_price" />
+-->
+
+        <ScrollView
+            android:id="@+id/sv_content_more"
+            style="@style/ScrollViewDialogStyle"
+            android:layout_height="0dp"
+            android:layout_marginBottom="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_price"
+            tools:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/desc_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_desc"
+                    style="@style/TextDescWorkDialogStyle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/lorem" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_photo"
+                    style="@style/TextPhotoDialogStyle"
+                    android:text="@string/photo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_desc" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list"
+                    style="@style/ViewPagerDialogStyle"
+                    android:orientation="horizontal"
+                    app:layoutManager=".utils.HorizontalLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_photo" />
+
+                <ImageView
+                    android:id="@+id/img_client"
+                    style="@style/DialogImageClientStyle"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_worker_user"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/list" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_clt_m"
+                    style="@style/PriceTitleStyle"
+                    android:text="@string/client"
+                    app:layout_constraintStart_toEndOf="@+id/img_client"
+                    app:layout_constraintTop_toTopOf="@+id/img_client" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_client_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_medium_500"
+                    android:gravity="center"
+                    android:textColor="@color/text_number_color"
+                    android:textSize="@dimen/_17ssp"
+                    app:layout_constraintStart_toStartOf="@+id/txt_clt_m"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_clt_m"
+                    tools:text="Ismoilov Akmal" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
+        style="@style/ButtonCancelStyle"
+        android:layout_height="@dimen/_60sdp"
+        android:drawableEnd="@drawable/ic_cancel"
+        android:text="@string/cancel"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/btn_accept"
+        app:layout_constraintStart_toStartOf="@+id/p_root"
+        app:layout_constraintTop_toBottomOf="@+id/p_root"
+        tools:visibility="visible" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_accept"
+        style="@style/ButtonAcceptStyle"
+        android:layout_height="@dimen/_60sdp"
+        android:drawableEnd="@drawable/ic_done"
+        android:text="@string/accept"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/p_root"
+        app:layout_constraintStart_toEndOf="@+id/btn_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/p_root"
+        tools:visibility="visible" />
+
+    <View
+        style="@style/ElevationShadowStyle"
+        android:background="@drawable/cl_progress_elevation_back"
+        app:layout_constraintBottom_toBottomOf="@+id/cl_progress"
+        app:layout_constraintEnd_toEndOf="@+id/cl_progress"
+        app:layout_constraintStart_toStartOf="@+id/cl_progress"
+        app:layout_constraintTop_toTopOf="@+id/cl_progress" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_progress"
+        style="@style/ProgressConstraintLayoutDialogStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_second_count"
+            style="@style/TextMedium"
+            android:layout_marginBottom="0dp"
+            android:text="@string/_0"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintBottom_toTopOf="@id/sek"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/sek"
+            style="@style/TextProgressSecondStyle"
+            android:text="@string/second"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <hiennguyen.me.circleseekbar.CircleSeekBar
+        android:id="@+id/progress_bar"
+        style="@style/ProgressBarStyle"
+        app:csb_arcColor="@color/transparent_100"
+        app:csb_arcWidth="@dimen/_2sdp"
+        app:csb_isShowText="false"
+        app:csb_max="20"
+        app:csb_progress="0"
+        app:csb_progressColor="@color/progress_arg_color"
+        app:csb_progressWidth="@dimen/_3sdp"
+        app:csb_textColor="@color/count_txt_color"
+        app:csb_textSize="@dimen/_30sdp"
+        app:csb_thumbDrawable="@drawable/circle_pp"
+        app:csb_thumbSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/cl_progress"
+        app:layout_constraintEnd_toEndOf="@+id/cl_progress"
+        app:layout_constraintStart_toStartOf="@+id/cl_progress"
+        app:layout_constraintTop_toTopOf="@+id/cl_progress" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@id/progress_bar"
+        app:layout_constraintLeft_toLeftOf="@id/progress_bar"
+        app:layout_constraintRight_toRightOf="@id/progress_bar"
+        app:layout_constraintTop_toTopOf="@id/progress_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

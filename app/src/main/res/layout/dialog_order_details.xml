@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                style="@style/PopToBackImageViewStyle"
+                android:contentDescription="@string/back_image_button"
+                android:src="@drawable/ic_back" />
+
+            <androidx.legacy.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/button_navigate"
+                style="@style/PopToBackImageViewStyle"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_navigate" />
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_order_detail_title"
+            style="@style/TextLarge"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/aktiv_book"
+            android:textSize="@dimen/_18ssp" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card1"
+            style="@style/RectangleCardViewWithCorner"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_10sdp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_definition"
+                    style="@style/TextMiddleTitlePhoneSignUpStyle"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="0dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/definition"
+                    android:textColor="@color/text_number_color"
+                    android:textSize="@dimen/_15ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/cost_icon"
+                    style="@style/ImageViewDefStyle"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_money"
+                    app:layout_constraintStart_toStartOf="@id/text_definition"
+                    app:layout_constraintTop_toBottomOf="@id/text_definition" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/cost_title"
+                    style="@style/TextMiddleTitlePhoneSignUpStyle"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/cost"
+                    android:textColor="@color/text_number_color"
+                    android:textSize="@dimen/_15ssp"
+                    app:layout_constraintStart_toEndOf="@id/cost_icon"
+                    app:layout_constraintTop_toTopOf="@id/cost_icon" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/work_cost"
+                    style="@style/TextMiddleTitlePhoneSignUpStyle"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    app:layout_constraintBottom_toBottomOf="@id/cost_icon"
+                    app:layout_constraintStart_toStartOf="@id/cost_title"
+                    app:layout_constraintTop_toBottomOf="@id/cost_title"
+                    tools:text="2.000.000 so'm" />
+
+                <ImageView
+                    android:id="@+id/space"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@color/text_number_color"
+                    android:backgroundTint="@color/hintColor"
+                    android:contentDescription="@string/app_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/work_cost" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/booking_definition"
+                    style="@style/TextMiddleTitlePhoneSignUpStyle"
+                    android:layout_marginStart="0dp"
+                    android:text="@string/booking_definition"
+                    android:textColor="@color/text_number_color"
+                    android:textSize="@dimen/_15ssp"
+                    app:layout_constraintStart_toStartOf="@id/text_definition"
+                    app:layout_constraintTop_toBottomOf="@id/space" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_booking_definition"
+                    style="@style/TextMiddleTitlePhoneSignUpStyle"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    app:layout_constraintStart_toStartOf="@id/booking_definition"
+                    app:layout_constraintTop_toBottomOf="@id/booking_definition"
+                    tools:text="Ta'rif yoziladi" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/detail_photo_title"
+                    style="@style/TextMiddleTitlePhoneSignUpStyle"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/picture"
+                    android:textColor="@color/text_number_color"
+                    app:layout_constraintStart_toStartOf="@id/text_booking_definition"
+                    app:layout_constraintTop_toBottomOf="@id/text_booking_definition" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list"
+                    style="@style/ViewPagerDialogStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    app:layoutManager=".utils.HorizontalLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/detail_photo_title"
+                    tools:listitem="@layout/photos_item_recycler" />
+
+                <ImageView
+                    android:id="@+id/img_client"
+                    style="@style/DialogImageClientStyle"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_worker_user"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/list" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_clt_m"
+                    style="@style/PriceTitleStyle"
+                    android:text="@string/client"
+                    app:layout_constraintStart_toEndOf="@+id/img_client"
+                    app:layout_constraintTop_toTopOf="@+id/img_client" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_client_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:fontFamily="@font/gilroy_medium_500"
+                    android:gravity="start"
+                    android:textColor="@color/text_number_color"
+                    android:textSize="@dimen/_17ssp"
+                    app:layout_constraintLeft_toLeftOf="@+id/txt_clt_m"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_clt_m"
+                    tools:text="Ismoilov Akmal" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card2"
+            style="@style/RectangleCardViewWithCorner"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/addressTitle"
+                    style="@style/TextMiddleTitlePhoneSignUpStyle"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/address"
+                    android:textColor="@color/text_number_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/addressDefinition"
+                    style="@style/TextMiddleTitlePhoneSignUpStyle"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/lorem"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toStartOf="@id/mapPicture"
+                    app:layout_constraintStart_toStartOf="@id/addressTitle"
+                    app:layout_constraintTop_toBottomOf="@id/addressTitle" />
+
+                <ImageView
+                    android:id="@+id/mapPicture"
+                    style="@style/ImageViewDefStyle"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/map_example"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/mapButton"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/hintColor"
+                    android:maxLines="2"
+                    android:text="@string/map_string"
+                    android:textAllCaps="false"
+                    app:cornerRadius="@dimen/_10sdp"
+                    app:layout_constraintEnd_toStartOf="@id/mapPicture"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/addressDefinition" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancelButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/new_red"
+                android:drawableEnd="@drawable/ic_cancel"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/cancel_string"
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/_10sdp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/finishButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/main_button_color"
+                android:drawableEnd="@drawable/ic_finish"
+                android:text="@string/finish"
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/_10sdp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/callButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/main_button_color"
+                android:drawableEnd="@drawable/ic_call"
+                android:text="@string/call_to_worker"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                app:cornerRadius="@dimen/_10sdp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

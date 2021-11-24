@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_order"
+    style="@style/ProfileCardsStyle"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_20sdp"
+    app:cardElevation="@dimen/_3sdp"
+    app:shapeAppearance="@style/RoundedCornerShape">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:padding="@dimen/_10sdp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_job_desc"
+            style="@style/TextSmall"
+            android:layout_width="0dp"
+            android:layout_marginTop="0dp"
+            android:gravity="start"
+            android:maxLines="2"
+            android:text="@string/job_info"
+            android:textColor="@color/text_number_color"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/button_more"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/button_more"
+            style="@style/CircleEditButtonStyle"
+            android:layout_margin="0dp"
+            android:contentDescription="@string/app_name"
+            android:padding="0dp"
+            android:src="@drawable/ic_more_night_day"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_job_desc" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_data_temp"
+            style="@style/TextSmall"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:gravity="start"
+            android:text="@string/data"
+            android:textColor="@color/txt_color"
+            app:layout_constraintBottom_toTopOf="@id/text_category_temp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_job_desc"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_data"
+            style="@style/TextSmall"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:gravity="start"
+            android:text="@string/data_temp"
+            android:textColor="@color/text_number_color"
+            app:layout_constraintBottom_toBottomOf="@id/text_data_temp"
+            app:layout_constraintLeft_toRightOf="@id/text_data_temp"
+            app:layout_constraintTop_toTopOf="@id/text_data_temp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_category_temp"
+            style="@style/TextSmall"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:gravity="start"
+            android:text="@string/category"
+            android:textColor="@color/txt_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_data_temp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_category"
+            style="@style/TextSmall"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:gravity="start"
+            android:text="@string/temp_job"
+            android:textColor="@color/text_number_color"
+            app:layout_constraintBottom_toBottomOf="@id/text_category_temp"
+            app:layout_constraintLeft_toRightOf="@id/text_category_temp"
+            app:layout_constraintTop_toTopOf="@id/text_category_temp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.55" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_status_temp"
+            style="@style/TextSmall"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:gravity="start"
+            android:text="@string/status"
+            android:textColor="@color/txt_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/text_data_temp"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@id/text_data_temp"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_status"
+            style="@style/TextSmall"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:gravity="start"
+            android:text="@string/data_status"
+            android:textColor="@color/orange_text"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/text_status_temp"
+            app:layout_constraintLeft_toRightOf="@id/text_status_temp"
+            app:layout_constraintTop_toTopOf="@id/text_status_temp"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_orders_count_temp"
+            style="@style/TextSmall"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:gravity="start"
+            android:text="@string/requests"
+            android:textColor="@color/txt_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/text_category_temp"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@id/text_category_temp"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_orders_count"
+            style="@style/TextSmall"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:gravity="start"
+            android:text="@string/data_count"
+            android:textColor="@color/text_number_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/text_orders_count_temp"
+            app:layout_constraintLeft_toRightOf="@id/text_orders_count_temp"
+            app:layout_constraintTop_toTopOf="@id/text_orders_count_temp"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

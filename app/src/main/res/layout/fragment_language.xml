@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/light_white"
+    android:overScrollMode="never"
+    tools:context=".ui.screen.entry_activity.language_fragment.LanguageFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/back_button"
+            style="@style/PopToBackImageViewStyle"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/logo"
+            style="@style/LogoMardexImageStyle"
+            android:layout_marginTop="@dimen/_45sdp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_title"
+            style="@style/TextTitleListOfImagesStyle"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="@string/mardex_dasturiga_xush_kelibsiz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_choose_language"
+            style="@style/TextSmall"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="@string/choose_language"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_title" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/layout_uzb"
+            style="@style/RectangleCardViewWithCorner"
+            app:cardElevation="@dimen/_3sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginHorizontal="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:padding="0dp"
+            app:cardBackgroundColor="@color/light_white"
+            app:layout_constraintBottom_toTopOf="@id/layout_rus"
+            app:layout_constraintTop_toBottomOf="@id/text_choose_language"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <LinearLayout
+                android:id="@+id/btn_uzb"
+                style="@style/ClickableLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|start"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/check_background_uzb"
+                    style="@style/RectangleCardViewWithCorner"
+                    app:cardElevation="@dimen/_3sdp"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/flag_uzb" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_uzb"
+                    style="@style/TextMedium"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="@string/o_zbek"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_title" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/layout_rus"
+            style="@style/RectangleCardViewWithCorner"
+            app:cardElevation="@dimen/_3sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginHorizontal="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:padding="0dp"
+            app:cardBackgroundColor="@color/light_white"
+            app:layout_constraintBottom_toTopOf="@id/layout_uzb_kirill"
+            app:layout_constraintTop_toBottomOf="@id/layout_uzb">
+
+            <LinearLayout
+                android:id="@+id/btn_rus"
+                style="@style/ClickableLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|start"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/check_background_rus"
+                    style="@style/RectangleCardViewWithCorner"
+                    app:cardElevation="@dimen/_3sdp"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="match_parent"
+                    tools:cardBackgroundColor="@color/language_selected">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/flag_russia" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_rus"
+                    style="@style/TextMedium"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="@string/rus"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_title" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/layout_uzb_kirill"
+            style="@style/RectangleCardViewWithCorner"
+            app:cardElevation="@dimen/_3sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginHorizontal="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:padding="0dp"
+            app:cardBackgroundColor="@color/light_white"
+            app:layout_constraintTop_toBottomOf="@id/layout_rus">
+
+            <LinearLayout
+                android:id="@+id/btn_uzb_kirill"
+                style="@style/ClickableLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|start"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/check_background_uzb_kirill"
+                    style="@style/RectangleCardViewWithCorner"
+                    app:cardElevation="@dimen/_3sdp"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/flag_uzb" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_uzb_kirill"
+                    style="@style/TextMedium"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="@string/krill"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_title" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/layout_uzb_kirill">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save"
+                style="@style/ButtonNextStyle"
+                android:layout_gravity="bottom"
+                android:layout_margin="0dp"
+                android:drawableEnd="@drawable/ic_arrow_white"
+                android:text="@string/continue_"
+                app:backgroundTint="@color/new_green"
+                app:cornerRadius="@dimen/_20sdp" />
+
+            <TextView
+                android:id="@+id/text_version"
+                style="@style/AppVersionTextStyleIntro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/formatted_mardex_v" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

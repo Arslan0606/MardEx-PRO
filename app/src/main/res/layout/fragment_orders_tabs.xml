@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textSoon"
+        style="@style/TextMedium"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:text="@string/soon"
+        android:textColor="@color/text_number_color"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutCenter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_first_text"
+            style="@style/TextLarge"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="@string/active_order"
+            android:textColor="@color/text_number_color"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_first_count"
+            style="@style/TextSmall"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="(0)"
+            android:textColor="@color/grey_text"
+            app:layout_constraintBottom_toBottomOf="@id/text_first_text"
+            app:layout_constraintLeft_toRightOf="@id/text_first_text"
+            app:layout_constraintTop_toTopOf="@id/text_first_text"
+            tools:text="@string/text_count" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_all"
+            style="@style/TextSmall"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="@string/_all"
+            android:textColor="@color/text_number_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/text_first_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_first_text" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/first_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/text_first_text"
+            tools:itemCount="1"
+            tools:listitem="@layout/orders_item_recycler" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_second_text"
+            style="@style/TextLarge"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="@string/finished_order"
+            android:textColor="@color/text_number_color"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/first_list" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_second_count"
+            style="@style/TextSmall"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="@string/_000"
+            android:textColor="@color/grey_text"
+            app:layout_constraintBottom_toBottomOf="@id/text_second_text"
+            app:layout_constraintLeft_toRightOf="@id/text_second_text"
+            app:layout_constraintTop_toTopOf="@id/text_second_text" />
+
+        <ImageView
+            android:id="@+id/image_filter"
+            style="@style/ClickableImageViewStyle"
+            android:layout_width="@dimen/_21sdp"
+            android:layout_height="@dimen/_21sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:contentDescription="@string/app_name"
+            android:padding="0dp"
+            android:src="@drawable/ic_filter"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/text_second_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_second_text" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/second_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/text_second_text"
+            tools:itemCount="2"
+            tools:listitem="@layout/orders_item_recycler" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_plus_history"
+            style="@style/ProfileButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_45sdp"
+            android:text="@string/show_more"
+            android:textColor="@color/new_green"
+            android:visibility="invisible"
+            app:backgroundTint="@color/button_white"
+            app:cornerRadius="@dimen/_8sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/second_list" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

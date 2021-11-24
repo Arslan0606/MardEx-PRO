@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    android:orientation="vertical"
+    tools:context=".ui.screen.entry_activity.login_fragment.LoginFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            style="@style/PopToBackImageViewStyle"
+            android:contentDescription="@string/back_image_button"
+            android:src="@drawable/ic_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_logo_worker"
+            style="@style/LogoMardexImageStyle"
+            android:contentDescription="@string/logo_image_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--ttt-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_login_title"
+            style="@style/TextTitleSignUpStyle"
+            android:text="@string/login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_logo_worker" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_phone_title"
+            style="@style/TextMiddleTitlePhoneSignUpStyle"
+            android:text="@string/enter_phone_number_"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_login_title" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_et_phone"
+            style="@style/InputEditTextCardViewStyle"
+            android:backgroundTint="@color/jobs_item_color"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_phone_title">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ll_et_phone"
+                style="@style/InputEditTextLayoutStyle"
+                android:hint="@string/phone_number_"
+                app:startIconDrawable="@drawable/ic_phone"
+                app:startIconTint="@null">
+
+                <br.com.sapereaude.maskedEditText.MaskedEditText
+                    android:id="@+id/et_phone"
+                    style="@style/InputMaskedEditTextPhoneStyle"
+                    android:backgroundTint="@color/jobs_item_color"
+                    android:importantForAutofill="no" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_password_title"
+            style="@style/TextMiddleTitlePhoneSignUpStyle"
+            android:text="@string/enter_password_ba"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_et_phone" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_et_password"
+            style="@style/InputEditTextCardViewStyle"
+            android:backgroundTint="@color/jobs_item_color"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_password_title">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ll_et_password"
+                style="@style/InputEditTextLayoutStyle"
+                android:hint="@string/password_"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/eye_grey"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:startIconTint="@null">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_password"
+                    style="@style/InputMaskedEditTextFullNameStyle"
+                    android:backgroundTint="@color/jobs_item_color"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/ll_forgot_password"
+            style="@style/LinearLayoutStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_et_password">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextMedium"
+                android:text="@string/forgot_password_" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/btn_reset_password"
+                style="@style/TextMedium"
+                android:background="?selectableItemBackground"
+                android:text="@string/restore_password_"
+                android:textColor="@color/new_green" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_enter"
+            style="@style/ButtonNextStyle"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="0dp"
+            android:drawableEnd="@drawable/ic_arrow_white"
+            android:text="@string/login_"
+            app:backgroundTint="@color/new_green"
+            app:cornerRadius="@dimen/_20sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_forgot_password" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_title_if_your_account"
+            style="@style/TextMedium"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/account_not_available"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_enter" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/btn_go_sign_up"
+            style="@style/TextMedium"
+            android:background="?selectableItemBackground"
+            android:text="@string/go_to_sign_up"
+            android:textColor="@color/new_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title_if_your_account" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_version"
+            style="@style/AppVersionTextStyleIntro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/formatted_mardex_v"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_go_sign_up" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

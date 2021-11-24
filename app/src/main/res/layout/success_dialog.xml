@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/RectangleCardViewWithCorner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_20sdp"
+    app:cardElevation="@dimen/_3sdp"
+    app:cardUseCompatPadding="true"
+    app:shapeAppearance="@style/RoundedCornerShape">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/dialogImage"
+            style="@style/ImageViewDefStyle"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_success_dialog_ic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/dialogMainTitle"
+            style="@style/TextLarge"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:maxLines="1"
+            android:text="@string/sending_message"
+            android:textColor="@color/main_button_color"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintEnd_toEndOf="@id/dialogImage"
+            app:layout_constraintStart_toStartOf="@id/dialogImage"
+            app:layout_constraintTop_toBottomOf="@id/dialogImage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/dialogSubtitle"
+            style="@style/TextMedium"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/access_notification"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintEnd_toEndOf="@id/dialogMainTitle"
+            app:layout_constraintStart_toStartOf="@id/dialogMainTitle"
+            app:layout_constraintTop_toBottomOf="@id/dialogMainTitle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dialogCloseButton"
+            style="@style/ButtonOkNextStyle"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:backgroundTint="@color/main_button_color"
+            android:text="@string/close"
+            android:textSize="@dimen/_15ssp"
+            app:cornerRadius="@dimen/_35sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogSubtitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

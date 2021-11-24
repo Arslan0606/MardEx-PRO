@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_white_and_black"
+    tools:context=".ui.screen.main_activity.home_fragment.problems_fragment.ProblemsFragment"
+    tools:ignore="RtlHardcoded">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/cameraInstructionBackButton"
+            style="@style/PopToBackImageViewStyle"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/problemsLogoImage"
+            style="@style/LogoMardexImageStyle"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/problemsScreenTitle"
+            style="@style/TextTitleSignUpStyle"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:text="@string/problems1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/problemsLogoImage" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/photoControl"
+            style="@style/CircleButtonStyleWithConfigurationStyle"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:drawableLeft="@drawable/ic_photo_person"
+            android:text="@string/complete_photo_passport"
+            android:visibility="gone"
+            app:cornerRadius="@dimen/_20sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/problemsScreenTitle"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/balanceControl"
+            style="@style/CircleButtonStyleWithConfigurationStyle"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:drawableLeft="@drawable/ic_reason_2"
+            android:fontFamily="@font/gilroy_semi_bold_600"
+            android:text="@string/shaxsiy_hisobni"
+            android:visibility="gone"
+            app:cornerRadius="@dimen/_20sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photoControl"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/gpsControl"
+            style="@style/CircleButtonStyleWithConfigurationStyle"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:drawableLeft="@drawable/ic_reason_3"
+            android:text="@string/turn_on_gps"
+            android:visibility="gone"
+            app:cornerRadius="@dimen/_20sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/balanceControl"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

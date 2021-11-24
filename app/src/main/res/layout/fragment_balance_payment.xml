@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_white_and_black"
+    tools:context=".ui.screen.main_activity.tariff_fragment.balance_payment_fragment.BalancePaymentFragment">
+
+    <ImageView
+        android:id="@+id/back_button"
+        style="@style/PopToBackImageViewStyle"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textHistoryPayment"
+        style="@style/TextTitleSignUpStyle"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/balance_payment"
+        app:layout_constraintStart_toStartOf="@id/back_button"
+        app:layout_constraintTop_toBottomOf="@+id/back_button" />
+
+    <ImageView
+        android:id="@+id/balanceIcon"
+        style="@style/ImageViewDefStyle"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_info_balance"
+        app:layout_constraintStart_toStartOf="@id/textHistoryPayment"
+        app:layout_constraintTop_toBottomOf="@id/textHistoryPayment" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/accountText"
+        style="@style/TextMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="@string/id_info"
+        android:textColor="@color/text_number_color"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintBottom_toBottomOf="@id/balanceIcon"
+        app:layout_constraintStart_toEndOf="@id/balanceIcon"
+        app:layout_constraintTop_toTopOf="@id/balanceIcon" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_payment_id"
+        style="@style/TextTitleSignUpStyle"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintBottom_toBottomOf="@id/accountText"
+        app:layout_constraintStart_toEndOf="@id/accountText"
+        app:layout_constraintTop_toTopOf="@id/accountText"
+        tools:text="1234-5678" />
+
+    <ImageView
+        android:id="@+id/button_balance_id_copy"
+        style="@style/CircleEditButtonStyle"
+        android:layout_marginEnd="4dp"
+        android:contentDescription="@string/app_name"
+        android:padding="0dp"
+        android:src="@drawable/ic_copy"
+        app:layout_constraintBottom_toBottomOf="@id/text_payment_id"
+        app:layout_constraintLeft_toRightOf="@id/text_payment_id"
+        app:layout_constraintTop_toTopOf="@id/text_payment_id" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_billing"
+        style="@style/TextMiddleTitlePhoneSignUpStyle"
+        android:layout_marginStart="0dp"
+        android:text="@string/billing_money"
+        android:textColor="@color/sign_title_txt_color"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/balanceIcon"
+        app:layout_constraintTop_toBottomOf="@+id/accountText"
+        tools:visibility="gone" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_amount_money"
+        style="@style/InputEditTextCardViewStyle"
+        android:layout_width="0dp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:backgroundTint="@color/jobs_item_color"
+        android:visibility="gone"
+        app:cardElevation="@dimen/_6sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_billing"
+        tools:visibility="gone">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ll_et_password"
+            style="@style/InputEditTextLayoutStyle"
+            android:hint="@string/money_string"
+            app:startIconDrawable="@drawable/ic_money_icon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
+                style="@style/InputMaskedEditTextFullNameStyle"
+                android:backgroundTint="@color/jobs_item_color"
+                android:textSize="@dimen/_15ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_exist_billing"
+        style="@style/TextMiddleTitlePhoneSignUpStyle"
+        android:layout_width="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:gravity="start"
+        android:text="@string/exist_billing"
+        android:textColor="@color/sign_title_txt_color"
+        app:layout_constraintLeft_toLeftOf="@id/balanceIcon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_amount_money" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_payme"
+        style="@style/InputEditTextCardViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:backgroundTint="@color/billing_back"
+        app:layout_constraintEnd_toStartOf="@id/cv_click"
+        app:layout_constraintStart_toStartOf="@+id/txt_exist_billing"
+        app:layout_constraintTop_toBottomOf="@id/txt_exist_billing">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/payme_logo"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_click"
+        style="@style/InputEditTextCardViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:backgroundTint="@color/billing_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cv_payme"
+        app:layout_constraintTop_toBottomOf="@id/txt_exist_billing"
+        app:layout_goneMarginEnd="@dimen/_10sdp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/click_logo" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/skipButton"
+        style="@style/CircleButtonStyleWithConfigurationStyle"
+        android:layout_height="@dimen/_65sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:backgroundTint="@color/main_button_color"
+        android:drawableEnd="@drawable/ic_arrow_white"
+        android:text="@string/billing_the_account"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:cornerRadius="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/back_white_and_black">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:overScrollMode="never">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                style="@style/PopToBackImageViewStyle"
+                android:contentDescription="@string/back_image_button"
+                android:src="@drawable/ic_back"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_title"
+                style="@style/TextTitleSignUpStyle"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/add_photo"
+                app:layout_constraintTop_toBottomOf="@id/btn_back" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:overScrollMode="never"
+                app:layout_constraintTop_toBottomOf="@id/text_title" />
+
+            <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                android:id="@+id/dots_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:maxWidth="@dimen/_200sdp"
+                app:dotsColor="@color/new_green"
+                app:dotsCornerRadius="@dimen/_8sdp"
+                app:dotsSize="@dimen/_10sdp"
+                app:dotsSpacing="@dimen/_4sdp"
+                app:dotsStrokeColor="@color/new_green"
+                app:dotsWidthFactor="2.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pager"
+                app:progressMode="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/dots_indicator">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/layout_add_photo"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardPreventCornerOverlap="true">
+
+                    <LinearLayout
+                        android:id="@+id/layout_add"
+                        style="@style/ClickableLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:background="@color/jobs_item_color"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/ic_add_image" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/text_add"
+                            style="@style/TextSmall"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:gravity="start"
+                            android:text="@string/add_jobs"
+                            android:textColor="@color/new_green"
+                            android:textSize="@dimen/_10ssp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:backgroundTint="@color/jobs_item_color"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardPreventCornerOverlap="true">
+
+                    <ImageView
+                        style="@style/ClickableLayoutStyle"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_delete" />
+
+                    <View
+                        android:id="@+id/layout_delete"
+                        style="@style/ClickableLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:backgroundTint="@color/jobs_item_color"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardPreventCornerOverlap="true">
+
+                    <ImageView
+                        style="@style/ClickableLayoutStyle"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_left" />
+
+                    <View
+                        android:id="@+id/layout_left"
+                        style="@style/ClickableLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:backgroundTint="@color/jobs_item_color"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardPreventCornerOverlap="true">
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_right" />
+
+                    <View
+                        android:id="@+id/layout_right"
+                        style="@style/ClickableLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save"
+        style="@style/ButtonNextStyle"
+        android:layout_gravity="bottom"
+        android:drawableEnd="@drawable/ic_arrow_white"
+        android:text="@string/save"
+        app:backgroundTint="@color/new_green"
+        app:cornerRadius="@dimen/_20sdp" />
+</FrameLayout>

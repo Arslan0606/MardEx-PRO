@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        style="@style/PopToBackImageViewStyle"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logoImage"
+        style="@style/LogoMardexImageStyle"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/verificationScreenTitle"
+        style="@style/TextTitleSignUpStyle"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:gravity="center"
+        android:text="@string/telefon_raqamingizni_tasdiqlang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoImage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/verificationScreenSubtitle"
+        style="@style/TextSmall"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="@string/telefon_raqamingiz_1_s_ga_sms_kod_yuborildi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/verificationScreenTitle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/verifyCodeTitle"
+        style="@style/TextSmall"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:text="@string/kodni_kiriting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verificationScreenSubtitle" />
+
+    <FrameLayout
+        android:id="@+id/pin_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/verifyCodeTitle">
+
+        <com.mukesh.OtpView
+            android:id="@+id/code"
+            style="@style/PinViewStyle"
+            android:layout_gravity="center"
+            tools:text="123456" />
+
+        <View
+            android:id="@+id/aboveCode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_code_desc"
+        style="@style/TextSmall"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:fontFamily="@font/gilroy_bold_700"
+        android:gravity="center"
+        android:text="@string/kod_sizga_jo_natilgan"
+        android:textColor="@color/new_green"
+        app:layout_constraintEnd_toEndOf="@+id/pin_view"
+        app:layout_constraintStart_toStartOf="@+id/pin_view"
+        app:layout_constraintTop_toBottomOf="@+id/pin_view" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_send_again"
+        style="@style/CircleButtonImageStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_50sdp"
+        android:backgroundTint="@color/white"
+        android:drawableEnd="@drawable/ic_refresh"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:text="@string/qayta_jo_natish"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextSmall"
+        android:textColor="@color/hintColor"
+        android:visibility="gone"
+        app:cornerRadius="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_code_desc" />
+
+    <!--   <com.google.android.material.button.MaterialButton
+           android:id="@+id/btnNextSms"
+           style="@style/ButtonNextStyle"
+           android:layout_marginTop="@dimen/_20sdp"
+           android:drawableEnd="@drawable/ic_arrow_white"
+           android:text="@string/next"
+           app:backgroundTint="@color/new_green"
+           app:cornerRadius="@dimen/_20sdp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/btn_send_again" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/top_bg_line"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/dilog_successfully_top_view_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dialog_area_cv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/dialog_area_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_bg_line">
+
+            <TextView
+                android:id="@+id/header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:textColor="@color/dialog_successfully_icon_bg"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/success" />
+
+            <View
+                android:id="@+id/empty_line"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/dialog_successfully_icon_bg"
+                app:layout_constraintLeft_toLeftOf="@id/header_text"
+                app:layout_constraintRight_toRightOf="@+id/header_text"
+                app:layout_constraintTop_toBottomOf="@id/header_text"
+                app:layout_constraintWidth_percent="0.15" />
+
+            <TextView
+                android:id="@+id/message_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:maxWidth="300dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/empty_line"
+                tools:text="@string/success" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_no_background"
+                android:text="@string/rad_etish"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                app:backgroundTint="@null"
+                app:icon="@drawable/ic_cancel_1"
+                app:iconGravity="textEnd"
+                app:iconTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/btn_yes"
+                app:layout_constraintTop_toBottomOf="@id/message_text" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_no_background"
+                android:text="@string/qabul_qilish"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                app:backgroundTint="@null"
+                app:icon="@drawable/ic_yes"
+                app:iconGravity="textEnd"
+                app:iconTint="@color/main_color"
+                app:layout_constraintLeft_toRightOf="@id/btn_no"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn_no" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/dialogMessageImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/dialog_bg_view"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_baseline_info"
+            app:layout_constraintBottom_toTopOf="@id/dialog_area_cv"
+            app:layout_constraintRight_toRightOf="@id/dialog_area_cv"
+            app:layout_constraintTop_toTopOf="@id/dialog_area_cv"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:id="@+id/bottom_bg_line"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@color/dilog_successfully_top_view_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_area_cv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

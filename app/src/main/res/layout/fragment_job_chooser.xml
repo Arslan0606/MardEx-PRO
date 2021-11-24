@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/light_white">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:overScrollMode="never">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                style="@style/PopToBackImageViewStyle"
+                android:contentDescription="@string/back_image_button"
+                android:src="@drawable/ic_back"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_title"
+                style="@style/TextTitleSignUpStyle"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/choose_your_job"
+                app:layout_constraintTop_toBottomOf="@id/btn_back" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/searchArea"
+                style="@style/RectangleCardViewWithCorner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:backgroundTint="@color/jobs_item_color"
+                app:layout_constraintTop_toBottomOf="@id/text_title">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_search"
+                    style="@style/SearchLayoutStyle"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/search"
+                        style="@style/SearchTextViewStyle"
+                        android:hint="@string/search_new"
+                        app:backgroundTint="@color/jobs_item_color" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/empty_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/searchArea">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_baseline_empty" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextMedium"
+                    android:text="@string/no_jobs"
+                    android:textColor="@color/sign_title_txt_color" />
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_choose_category"
+                style="@style/TextMedium"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/choose_your_category"
+                android:textColor="@color/sign_title_txt_color"
+                app:layout_constraintTop_toBottomOf="@id/searchArea" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_category"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                android:paddingHorizontal="@dimen/_5sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_choose_category"
+                tools:listitem="@layout/category_item_recycler" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_show_all"
+                style="@style/TextMedium"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="@string/show_all"
+                android:textColor="@color/new_green"
+                app:layout_constraintTop_toBottomOf="@id/list_category" />
+
+            <ImageView
+                android:id="@+id/image_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_line"
+                app:layout_constraintTop_toBottomOf="@id/text_show_all" />
+
+            <View
+                android:id="@+id/btn_show_all"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="@id/image_line"
+                app:layout_constraintLeft_toLeftOf="@id/text_show_all"
+                app:layout_constraintRight_toRightOf="@id/text_show_all"
+                app:layout_constraintTop_toTopOf="@id/text_show_all" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_jobs"
+                style="@style/TextMedium"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/choose_jobs_temp"
+                android:textColor="@color/sign_title_txt_color"
+                app:layout_constraintTop_toBottomOf="@id/btn_show_all" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_search_results"
+                style="@style/TextMedium"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/results"
+                android:textColor="@color/sign_title_txt_color"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/btn_show_all" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_jobs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_100sdp"
+                android:scrollbarSize="@dimen/_4sdp"
+                android:scrollbarThumbVertical="@color/new_green"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_jobs"
+                tools:itemCount="3"
+                tools:listitem="@layout/jobs_item_recycler" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save"
+        style="@style/ButtonNextStyle"
+        android:layout_gravity="bottom"
+        android:drawableEnd="@drawable/ic_arrow_white"
+        android:text="@string/save"
+        app:backgroundTint="@color/new_green"
+        app:cornerRadius="@dimen/_20sdp" />
+
+</FrameLayout>

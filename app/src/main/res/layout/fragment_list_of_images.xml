@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            style="@style/PopToBackImageViewStyle"
+            android:contentDescription="@string/back_image_button"
+            android:src="@drawable/ic_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_page_title"
+            style="@style/TextTitleSignUpStyle"
+            android:layout_width="0dp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:gravity="center"
+            android:text="@string/demand_images"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_back" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_desc_page"
+            style="@style/TextDescListOfImagesStyle"
+            android:text="@string/desc_photo_send"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_page_title" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_photo_main_page"
+            style="@style/CircleButtonStyleWithConfigurationStyle"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:backgroundTint="@color/jobs_item_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_desc_page">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text1Image"
+                style="@style/TextListOfImageStyle"
+                android:drawableStart="@drawable/ic_not"
+                android:drawableEnd="@drawable/ic_arrow_grey"
+                android:drawablePadding="@dimen/_15sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:text="@string/photo_of_the_main_page_of_the_passport" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_photo_second_page"
+            style="@style/CircleButtonStyleWithConfigurationStyle"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:backgroundTint="@color/jobs_item_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_photo_main_page">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text2Image"
+                style="@style/TextListOfImageStyle"
+                android:drawableStart="@drawable/ic_not"
+                android:drawableEnd="@drawable/ic_arrow_grey"
+                android:drawablePadding="@dimen/_5sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:text="@string/photo_of_the_passport_registration_page" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_photo_with_face"
+            style="@style/CircleButtonStyleWithConfigurationStyle"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:backgroundTint="@color/jobs_item_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_photo_second_page">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text3Image"
+                style="@style/TextListOfImageStyle"
+                android:drawableStart="@drawable/ic_not"
+                android:drawableEnd="@drawable/ic_arrow_grey"
+                android:drawablePadding="@dimen/_5sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:text="@string/selfie_with_passport_on_hand" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continueButton"
+            style="@style/ButtonNextStyle"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="0dp"
+            android:drawableEnd="@drawable/ic_arrow_white"
+            android:text="@string/continue_"
+            app:backgroundTint="@color/new_green"
+            app:cornerRadius="@dimen/_20sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_photo_with_face" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

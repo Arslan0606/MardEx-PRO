@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.screen.main_activity.home_fragment.problems_fragment.camera_fragment.CameraFragment">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/v_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_back"
+        style="@style/FloatActionButtonCamera"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:contentDescription="@string/switch_camera"
+        android:scaleType="center"
+        android:src="@drawable/ic_prev"
+        app:layout_constraintEnd_toEndOf="@id/btn_flash"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_title_camera_"
+        style="@style/TextCameraTitleStyle"
+        android:layout_width="@dimen/_420sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/camera_text_bg"
+        android:gravity="center"
+        android:rotation="90"
+        android:text="@string/desc_take_photo"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintBottom_toTopOf="@id/btn_flash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/btn_back"
+        app:layout_constraintTop_toBottomOf="@id/btn_back" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_camera"
+        style="@style/FloatActionButtonCamera"
+        android:contentDescription="@string/capture_camera"
+        android:scaleType="center"
+        android:src="@drawable/ic_camera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_flash"
+        app:layout_constraintStart_toEndOf="@id/btn_switch_camera"
+        app:layout_constraintTop_toTopOf="@id/btn_switch_camera" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_flash"
+        style="@style/FloatActionButtonCamera"
+        android:contentDescription="@string/flash_turn_on_flash_button"
+        android:scaleType="center"
+        android:src="@drawable/ic_flash"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_camera" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_switch_camera"
+        style="@style/FloatActionButtonCamera"
+        android:contentDescription="@string/switch_camera"
+        android:scaleType="center"
+        android:src="@drawable/ic_switch_camera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_camera"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/frame_1"
+        style="@style/RectangleBoxRelativeViewStyle"
+        layout="@layout/rectangle_frame_camera_to_passport"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_300sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/btn_camera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/frame_2"
+        style="@style/RectangleWithFaceBoxRelativeViewStyle"
+        layout="@layout/rectangle_frame_face_and_passport"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/back_white_and_black"
+    tools:context=".ui.screen.main_activity.edit_phone_number.EditPhoneFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:overScrollMode="never">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                style="@style/PopToBackImageViewStyle"
+                android:contentDescription="@string/back_image_button"
+                android:src="@drawable/ic_back"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_title"
+                style="@style/TextTitleSignUpStyle"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:maxLines="2"
+                android:text="@string/edit_phone_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_back" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_phone_title"
+                style="@style/TextMiddleTitlePhoneSignUpStyle"
+                android:text="@string/enter_phone_number_"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_title" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_et_phone"
+                style="@style/InputEditTextCardViewStyle"
+                android:backgroundTint="@color/jobs_item_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_phone_title">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ll_et_phone"
+                    style="@style/InputEditTextLayoutStyle"
+                    app:startIconTint="@null"
+                    android:hint="@string/phone_number_"
+                    app:startIconDrawable="@drawable/ic_phone">
+
+                    <br.com.sapereaude.maskedEditText.MaskedEditText
+                        android:id="@+id/et_phone"
+                        style="@style/InputMaskedEditTextPhoneStyle"
+                        android:background="@color/jobs_item_color" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/et"
+                style="@style/TextMiddleTitlePhoneSignUpStyle"
+                android:gravity="center"
+                android:text="@string/sms_send_code"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv_et_phone" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save"
+        style="@style/ButtonNextStyle"
+        android:layout_gravity="bottom"
+        android:drawableEnd="@drawable/ic_arrow_white"
+        android:text="@string/continue_"
+        app:backgroundTint="@color/new_green"
+        app:cornerRadius="@dimen/_20sdp" />
+</FrameLayout>

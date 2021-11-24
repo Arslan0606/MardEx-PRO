@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_photos"
+    style="@style/ProfileCardsStyle"
+    android:layout_marginBottom="@dimen/_15sdp"
+    app:cardCornerRadius="@dimen/_20sdp"
+    app:cardElevation="@dimen/_3sdp"
+    app:layout_constraintTop_toBottomOf="@id/layout_jobs"
+    app:shapeAppearance="@style/RoundedCornerShape">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_10sdp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_photo_info"
+            style="@style/TextMedium"
+            android:gravity="start"
+            android:text="@string/my_photos_"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/button_settings_photos"
+            style="@style/CircleEditButtonStyle"
+            android:contentDescription="@string/app_name"
+            android:padding="0dp"
+            android:src="@drawable/ic_circle_settings"
+            app:layout_constraintBottom_toBottomOf="@id/text_photo_info"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_photo_info" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_photos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_photo_info"
+            app:spanCount="3"
+            tools:itemCount="1"
+            tools:listitem="@layout/photos_item_recycler" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

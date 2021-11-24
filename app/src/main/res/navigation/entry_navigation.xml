@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/entry_navigation"
+    app:startDestination="@id/splashFragment2">
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="uz.star.mardexworker.ui.screen.entry_activity.signUp_fragment.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUpFragment_to_smsVerificationFragment"
+            app:destination="@id/smsVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="uz.star.mardexworker.ui.screen.entry_activity.login_fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_restorePasswordFragment"
+            app:destination="@id/restorePasswordFragment"
+            app:popUpTo="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/smsVerificationFragment"
+        android:name="uz.star.mardexworker.ui.screen.entry_activity.sms_verification_fragment.SmsVerificationFragment"
+        android:label="fragment_sms_verification"
+        tools:layout="@layout/fragment_sms_verification">
+        <action
+            android:id="@+id/action_smsVerificationFragment_to_jobChooserFragment"
+            app:destination="@id/jobChooserFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="signUpData"
+            app:argType="uz.star.mardexworker.model.request.signup.SignUpData" />
+        <argument
+            android:name="phoneNumber"
+            app:argType="string" />
+        <argument
+            android:name="screenName"
+            app:argType="string" />
+        <argument
+            android:name="newPassword"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_smsVerificationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/jobChooserFragment"
+        android:name="uz.star.mardexworker.ui.screen.entry_activity.job_chooser_fragment.JobChooserFragment"
+        android:label="JobChooserFragment"
+        tools:layout="@layout/fragment_job_chooser">
+        <argument
+            android:name="jobsList"
+            app:argType="uz.star.mardexworker.model.response.jobs_data.EditJobsDeliverData"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="userJobs"
+            app:argType="uz.star.mardexworker.model.response.jobs_data.UserJobsDeliver"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/restorePasswordFragment"
+        android:name="uz.star.mardexworker.ui.screen.entry_activity.restore_password_fragment.RestorePasswordFragment"
+        android:label="fragment_restore_password"
+        tools:layout="@layout/fragment_restore_password">
+        <action
+            android:id="@+id/action_restorePasswordFragment_to_smsVerificationFragment"
+            app:destination="@id/smsVerificationFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment2"
+        android:name="uz.star.mardexworker.ui.screen.entry_activity.splash_fragment.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment2_to_languageFragment2"
+            app:destination="@id/languageFragment2"
+            app:popUpTo="@id/splashFragment2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment2_to_introFragment2"
+            app:destination="@id/introFragment2"
+            app:popUpTo="@id/splashFragment2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment2_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/languageFragment2"
+        tools:layout="@layout/fragment_language"
+        android:name="uz.star.mardexworker.ui.screen.entry_activity.language_fragment.LanguageFragment"
+        android:label="LanguageFragment">
+        <action
+            android:id="@+id/action_languageFragment2_to_introFragment2"
+            app:destination="@id/introFragment2"
+            app:popUpTo="@id/languageFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/introFragment2"
+        tools:layout="@layout/fragment_intro"
+        android:name="uz.star.mardexworker.ui.screen.entry_activity.intro_fragment.IntroFragment"
+        android:label="IntroFragment">
+        <action
+            android:id="@+id/action_introFragment2_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/introFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

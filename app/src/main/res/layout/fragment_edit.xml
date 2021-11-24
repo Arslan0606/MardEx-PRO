@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/main_color"
+    tools:context=".ui.screen.main_activity.edit_fragment.EditFragment"
+    tools:ignore="RtlHardcoded">
+
+    <ImageView
+        android:id="@+id/contentPanel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_54sdp"
+        android:background="@color/main_color"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/menu_button"
+        style="@style/ClickableImageViewStyle"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_back_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/TextMainTitleStyle"
+        android:text="@string/settings"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/menu_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/menu_button" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menu_button">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/main_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_minus36sdp"
+            android:background="@color/light_white"
+            app:cardBackgroundColor="@color/back_white_and_black"
+            app:cardElevation="@dimen/_10sdp"
+            app:shapeAppearance="@style/TopRoundedCornerShape">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/problemsScreenTitle"
+                    style="@style/TextTitleSignUpStyle"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center"
+                    android:text="@string/edit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/problemsLogoImage" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/personalDataButton"
+                    style="@style/CircleButtonEditWithConfigurationStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/ic_person_icon_with_bg"
+                    android:text="@string/personal_data"
+                    android:textAppearance="@style/TextMedium"
+                    android:textSize="@dimen/_14sdp"
+                    app:cornerRadius="@dimen/_20sdp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/personNumberButton"
+                    style="@style/CircleButtonEditWithConfigurationStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/ic_person_number_with_bg"
+                    android:text="@string/phone_number_"
+                    android:textAppearance="@style/TextMedium"
+                    android:textSize="@dimen/_14sdp"
+                    android:visibility="gone"
+                    app:cornerRadius="@dimen/_20sdp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/personPasswordButton"
+                    style="@style/CircleButtonEditWithConfigurationStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:drawableLeft="@drawable/ic_person_password_with_bg"
+                    android:text="@string/password_"
+                    android:textAppearance="@style/TextMedium"
+                    android:textSize="@dimen/_14sdp"
+                    app:cornerRadius="@dimen/_20sdp" />
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_title_if_your_account"
+                    style="@style/TextMedium"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_50sdp"
+                    android:background="?android:selectableItemBackground"
+                    android:gravity="center"
+                    android:text="@string/policy"
+                    android:textColor="@color/main_color_def"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_next" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

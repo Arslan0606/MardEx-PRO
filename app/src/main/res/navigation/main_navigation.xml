@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.home_fragment.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_problemsFragment"
+            app:destination="@id/problemsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_newsFragment2"
+            app:destination="@id/newsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.profile_fragment.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_jobChooserFragment2"
+            app:destination="@id/jobChooserFragment2" />
+        <action
+            android:id="@+id/action_profileFragment_to_imagesFragment"
+            app:destination="@id/imagesFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_problemsFragment"
+            app:destination="@id/problemsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_balancePaymentFragment"
+            app:destination="@id/balancePaymentFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_historyPaymentFragment"
+            app:destination="@id/historyPaymentFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editPersonalDataFragment"
+            app:destination="@id/editPersonalDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.orders_fragment.OrdersFragment"
+        android:label="OrdersFragment"
+        tools:layout="@layout/fragment_orders">
+        <action
+            android:id="@+id/action_ordersFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/problemsFragment"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.home_fragment.problems_fragment.ProblemsFragment"
+        android:label="fragment_problems"
+        tools:layout="@layout/fragment_problems">
+        <action
+            android:id="@+id/action_problemsFragment_to_listOfImages"
+            app:destination="@id/listOfImages" />
+        <action
+            android:id="@+id/action_problemsFragment_to_tariffsFragment"
+            app:destination="@id/tariffsFragment"
+            app:popUpTo="@id/problemsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraInstructionFragment2"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.home_fragment.problems_fragment.camera_instruction_fragment.CameraInstructionFragment"
+        android:label="fragment_camera_instruction"
+        tools:layout="@layout/fragment_camera_instruction">
+        <action
+            android:id="@+id/action_cameraInstructionFragment2_to_cameraFragment2"
+            app:destination="@id/cameraFragment2"
+            app:popUpTo="@id/cameraInstructionFragment2"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="button_id"
+            android:defaultValue="null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment2"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.home_fragment.problems_fragment.camera_fragment.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera">
+        <argument
+            android:name="photoCount"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/jobChooserFragment2"
+        android:name="uz.star.mardexworker.ui.screen.entry_activity.job_chooser_fragment.JobChooserFragment"
+        android:label="JobChooserFragment"
+        tools:layout="@layout/fragment_job_chooser">
+        <argument
+            android:name="jobsList"
+            android:defaultValue="@null"
+            app:argType="uz.star.mardexworker.model.response.jobs_data.EditJobsDeliverData"
+            app:nullable="true" />
+        <argument
+            android:name="userJobs"
+            android:defaultValue="@null"
+            app:argType="uz.star.mardexworker.model.response.jobs_data.UserJobsDeliver"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/imagesFragment"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.profile_fragment.images_fragment.ImagesFragment"
+        android:label="ImagesFragment"
+        tools:layout="@layout/fragment_images">
+        <argument
+            android:name="imagesList"
+            app:argType="string[]" />
+        <argument
+            android:name="editData"
+            android:defaultValue="@null"
+            app:argType="uz.star.mardexworker.model.response.EditProfileRequestData"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/tariffsFragment"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.tariff_fragment.TariffsFragment"
+        android:label="TariffsFragment"
+        tools:layout="@layout/fragment_tariffs">
+        <action
+            android:id="@+id/action_tariffsFragment_to_chooseTariffFragment"
+            app:destination="@id/chooseTariffFragment" />
+        <action
+            android:id="@+id/action_tariffsFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseTariffFragment"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.tariff_fragment.choose_tariff.ChooseTariffFragment"
+        android:label="ChooseTariffFragment"
+        tools:layout="@layout/fragment_choose_tariff">
+        <argument
+            android:name="tariffData"
+            app:argType="uz.star.mardexworker.model.response.tariff.TariffData" />
+        <argument
+            android:name="balance"
+            android:defaultValue="0L"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_chooseTariffFragment_to_balancePaymentFragment"
+            app:destination="@id/balancePaymentFragment" />
+    </fragment>
+    <argument
+        android:name="photo_count"
+        android:defaultValue="null"
+        app:argType="string"
+        app:nullable="true" />
+    <fragment
+        android:id="@+id/showCapturePhotoFragment2"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.home_fragment.problems_fragment.show_capture_photo_fragment.ShowCapturePhotoFragment"
+        android:label="fragment_show_capture_photo"
+        tools:layout="@layout/fragment_show_capture_photo">
+        <action
+            android:id="@+id/action_showCapturePhotoFragment2_to_cameraFragment2"
+            app:destination="@id/cameraFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listOfImages"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.home_fragment.problems_fragment.list_of_images_fragment.ListOfImagesFragment"
+        android:label="dialog_call_notification"
+        tools:layout="@layout/fragment_list_of_images">
+        <action
+            android:id="@+id/action_listOfImages_to_cameraInstructionFragment2"
+            app:destination="@id/cameraInstructionFragment2" />
+        <action
+            android:id="@+id/action_listOfImages_to_showCapturePhotoFragment"
+            app:destination="@id/showCapturePhotoFragment2"
+            app:popUpTo="@id/listOfImages"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment2"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.edit_fragment.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit">
+        <action
+            android:id="@+id/action_editFragment2_to_editPhoneFragment"
+            app:destination="@id/editPhoneFragment" />
+        <action
+            android:id="@+id/action_editFragment2_to_editPersonalDataFragment"
+            app:destination="@id/editPersonalDataFragment" />
+        <action
+            android:id="@+id/action_editFragment2_to_editPasswordFragment"
+            app:destination="@id/editPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPhoneFragment"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.edit_phone_number.EditPhoneFragment"
+        android:label="fragment_edit_phone"
+        tools:layout="@layout/fragment_edit_phone" />
+    <fragment
+        android:id="@+id/balancePaymentFragment"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.tariff_fragment.balance_payment_fragment.BalancePaymentFragment"
+        android:label="fragment_balance_payment"
+        tools:layout="@layout/fragment_balance_payment" />
+    <fragment
+        android:id="@+id/editPersonalDataFragment"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.edit_personal_data_fragment.EditPersonalDataFragment"
+        android:label="fragment_edit_personal_data"
+        tools:layout="@layout/fragment_edit_personal_data" />
+    <fragment
+        android:id="@+id/editPasswordFragment"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.edit_password.EditPasswordFragment"
+        android:label="fragment_edit_password"
+        tools:layout="@layout/fragment_edit_password" />
+    <fragment
+        android:id="@+id/changeLanguageFragment"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.change_language.ChangeLanguageFragment"
+        android:label="ChangeLanguageFragment"
+        tools:layout="@layout/fragment_change_language" />
+    <fragment
+        android:id="@+id/historyPaymentFragment"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.tariff_fragment.history_payment_fragment.HistoryPaymentFragment"
+        android:label="HistoryPaymentFragment"
+        tools:layout="@layout/fragment_history_payment" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.notification_fragment.NotificationFragment"
+        android:label="NotificationFragment"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/newsFragment2"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.news_fragment.NewsFragment"
+        android:label="NewsFragment"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_newsFragment2_to_newsInfoFragment"
+            app:destination="@id/newsInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsInfoFragment"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.news_fragment.news_info_fragment.NewsInfoFragment"
+        android:label="NewsInfoFragment"
+        tools:layout="@layout/fragment_news_info">
+        <argument
+            android:name="news_data"
+            app:argType="uz.star.mardexworker.model.response.news.NewsData"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/promocodeFragment"
+        android:name="uz.star.mardexworker.ui.screen.main_activity.promocode.PromocodeFragment"
+        android:label="fragment_promocode"
+        tools:layout="@layout/fragment_promocode" />
+
+
+</navigation>

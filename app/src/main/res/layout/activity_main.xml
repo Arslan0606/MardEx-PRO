@@ -1,0 +1,360 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:openDrawer="start">
+
+    <include
+        android:id="@+id/main_content"
+        layout="@layout/activity_main_content" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:overScrollMode="never"
+        app:itemHorizontalPadding="@dimen/_15sdp"
+        app:itemIconPadding="@dimen/_15sdp"
+        app:itemIconSize="@dimen/_30sdp"
+        app:itemIconTint="@color/text_number_color"
+        app:itemTextAppearance="@style/TextSmall"
+        app:itemTextColor="@color/text_number_color"
+        tools:itemIconTint="">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/header_layout"
+                    layout="@layout/layout_nav_header" />
+
+                <LinearLayout
+                    android:id="@+id/layout_settings"
+                    style="@style/ClickableLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:background="?android:selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_15sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_settings" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/settings_text"
+                        style="@style/TextSmall"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="0dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/settings"
+                        android:textColor="@color/text_number_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_news"
+                    style="@style/ClickableLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:background="?android:selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_15sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_news" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/news_text"
+                        style="@style/TextSmall"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="0dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/news"
+                        android:textColor="@color/text_number_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_language"
+                    style="@style/ClickableLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:background="?android:selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_15sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_language" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/language_text"
+                        style="@style/TextSmall"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="0dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/soft_lang"
+                        android:textColor="@color/text_number_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_promocode"
+                    style="@style/ClickableLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:background="?android:selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_15sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_promo" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/promocode_text"
+                        style="@style/TextSmall"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="0dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/promocode_text"
+                        android:textColor="@color/text_number_color" />
+
+                </LinearLayout>
+
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_call"
+                    style="@style/ClickableLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:background="?android:selectableItemBackground"
+                    android:paddingHorizontal="@dimen/_15sdp">
+
+                    <ImageView
+                        android:id="@+id/call_icon"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_call_menu"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/call_text"
+                        style="@style/TextSmall"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="0dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/_998_93_000_88_55"
+                        android:textColor="@color/text_number_color"
+                        app:layout_constraintLeft_toRightOf="@id/call_icon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/_text_call"
+                        style="@style/TextSmall"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="0dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/t_call"
+                        android:textColor="@color/AppVersionTextColor"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/call_icon"
+                        app:layout_constraintTop_toBottomOf="@id/call_text" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_mardex"
+                    style="@style/ClickableLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:background="?android:selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_15sdp">
+
+                    <ImageView
+                        android:id="@+id/pro_icon"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_mardex_menu"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/mardex_text"
+                        style="@style/TextSmall"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="0dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/mardex_uz"
+                        android:textColor="@color/text_number_color"
+                        app:layout_constraintLeft_toRightOf="@id/pro_icon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/text_our_site"
+                        style="@style/TextSmall"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="0dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/t_site"
+                        android:textColor="@color/AppVersionTextColor"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/pro_icon"
+                        app:layout_constraintTop_toBottomOf="@id/mardex_text" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_share"
+                    style="@style/ClickableLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:background="?android:selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_15sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_share_menu" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/share_text"
+                        style="@style/TextSmall"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="0dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/share"
+                        android:textColor="@color/text_number_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_night_mode"
+                    style="@style/ClickableLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_15sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_rounded_night" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/switchText"
+                        style="@style/TextSmall"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="0dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/night_mode"
+                        android:textColor="@color/text_number_color" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_night_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        app:thumbTint="@color/white"
+                        app:track="@drawable/custom_track"
+                        tools:checked="true" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:background="#DAECF4" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_log_out"
+                    style="@style/ButtonNextStyle"
+                    android:layout_gravity="bottom"
+                    android:layout_marginVertical="0dp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/menu_logout"
+                    android:textColor="@color/text_number_color"
+                    app:backgroundTint="@color/back_white_and_black"
+                    app:cornerRadius="@dimen/_10sdp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_version"
+                    style="@style/AppVersionTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:text="@string/formatted_mardex_v"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

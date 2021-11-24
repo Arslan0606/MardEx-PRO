@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frame_first_photo"
+    android:layout_width="@dimen/_100sdp"
+    android:layout_height="@dimen/_100sdp"
+    android:background="@drawable/box_camera"
+    android:padding="@dimen/_5sdp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="@+id/cv_title_camera"
+    app:layout_constraintStart_toStartOf="@+id/btn_prev"
+    app:layout_constraintTop_toBottomOf="@+id/cv_title_camera">
+
+    <ImageView
+        style="@style/EdgeFrameImageStyle"
+        android:src="@drawable/ic_edge_left_top" />
+
+    <ImageView
+        style="@style/EdgeFrameImageStyle"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_edge_right_top" />
+
+    <ImageView
+        style="@style/EdgeFrameImageStyle"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_edge_right_bottom" />
+
+    <ImageView
+        style="@style/EdgeFrameImageStyle"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_edge_left_bottom" />
+</RelativeLayout>

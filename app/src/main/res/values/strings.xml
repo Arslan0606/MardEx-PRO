@@ -1,0 +1,448 @@
+<resources>
+    <string name="app_name">MardEx PRO</string>
+
+    <!--Main-->
+    <string name="home">Uy</string>
+    <string name="tariff">Tariflar</string>
+    <string name="location">Xarita</string>
+    <string name="menu_confirm">Tasdiqlash</string>
+    <string name="title_job_chooser">Kasblaringizni tanlang</string>
+    <string name="settings">Sozlamalar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <!--Sign In(Login) page    ;';';';';';';';' -->
+    <string name="entrance_to_program">Dasturga kirish</string>
+    <string name="enter_phone_number">Telefon raqamini kiriting</string>
+    <string name="password">Parolni kiriting</string>
+    <string name="all">Barchasi</string>
+    <string name="_10">10</string>
+    <string name="Mardex">MardEx</string>
+    <string name="enter">Kirish</string>
+    <string name="forgot_password">Parolni unutdingizmi?</string>
+    <string name="title_profile">Profil</string>
+    <string name="name">FISH</string>
+    <string name="name_full">Familiya Ism Sharif</string>
+    <string name="temp_rating">100 / 100</string>
+    <string name="temp_balance">0 UZS</string>
+    <string name="pay">Hisobni toʻldirish</string>
+    <string name="temp_count_jobs">0</string>
+    <string name="temp_jobs">Umumiy\n ishlar</string>
+    <string name="temp_success">Qabul\n qilinganlar</string>
+    <string name="temp_cancel">Bekor\n qilinganlar</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etia, vel fringilla est ullamcorper eget nulla facilisi etia, vel fringilla est ullamcorper eget null</string>
+    <string name="phone">+99890 123 45 67</string>
+    <string name="about_me">Men haqimda</string>
+    <string name="temp_about">Ish beruvchilarda yaxshi taassurot yaratish uchun, o`zingiz haqingizda ma`lumotlarni kirgizing!</string>
+    <string name="about">Oʻzingiz haqingizda.</string>
+    <string name="photos">Ishlarimdan na`muna</string>
+    <string name="jobs">Ishlar roʻyxati</string>
+    <string name="Welcome">Xo’sh kelibsiz</string>
+    <string name="register">Roʻyxatdan oʻtish</string>
+    <string name="profile">Profil</string>
+
+    <string name="enter_your_phone_number">Iltimos,telefon raqamingizni toʻgʻri kiriting</string>
+    <string name="enter_your_password_number">Parolingizni kiriting</string>z
+
+    <!-- Sign Up(Register) page     ;';';';';'; -->
+    <string name="please_complete_fields">Iltimos quyidagilarni to’ldiring</string>
+    <string name="enter_full_name">F.I.SH</string>
+    <string name="confirm_password">Parolni takrorlang</string>
+    <string name="next">Davom etish</string>
+    <string name="if_you_are_before_sign_up">Agarda siz oldin roʻyxatdan oʻtgan boʻlsangiz</string>
+    <string name="code_verify">Kod tekshiruvi</string>
+    <string name="desc_code_verify">Sizning telefon raqamingizga 5 xonali sms kod yuborildi, ushbu kodni kiritishingiz kerak boʻladi. Vaqt chegaralangan</string>
+    <string name="code">Kod</string>
+    <string name="confirm_sms_code">Tasdiqlash</string>
+    <string name="send_code_again">Kodni takror yuborish</string>
+    <string name="again_to_register">Maʻlumotlarni takror kiritish</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--SettingsFragment-->
+    <string name="set_edit_lang">Tilni o`zgartirish</string>
+    <string name="set_night">Tungi rejim</string>
+    <string name="set_help">Yordam</string>
+    <string name="about_us">Biz haqimizda</string>
+    <string name="privacy_policy">Maxfiylik siyosati</string>
+    <string name="current_language">O`zbek</string>
+    <string name="Settings">Sozlamalar</string>
+
+    <!--Muammolar va talablar sabablar-->
+    <string name="problems">Muammolar</string>
+    <string name="desc_problems">Dasturdagi talablar va muammolar</string>
+    <string name="complete_photo_passport">Pasport ma`lumotlaringizni rasmga oling</string>
+    <string name="complete_photo_passport_in_proccess">Pasport ma`lumotlaringiz ko`rib chiqilmoqda</string>
+    <string name="demand_main_title">1. Dastur toʻliq ishlashi uchun talablar</string>
+    <string name="interference_problems_main_title">2. Dasturga xalaqit beruvchi omillar</string>
+    <string name="your_images_saved">Pasport rasmlari saqlandi</string>
+
+    <!--Tarif tanlash oynasi-->
+    <string name="mavjud_tariflar">Mavjud tariflar</string>
+    <string name="tariff_start">Silver</string>
+    <string name="cost_start">5000 UZS</string>
+    <string name="tariff_gold">Gold</string>
+    <string name="tariff_silver">Platinum</string>
+    <string name="cost_silver">10000 UZS</string>
+    <string name="cost_gold">15000 UZS</string>
+    <string name="choose">Tanlash</string>
+    <string name="batafsil">Batafsil</string>
+    <string name="_30">30</string>
+    <string name="text_kun">kun</string>
+    <string name="tarif_haqida_ma_lumot">Tarif haqida ma`lumot</string>
+    <string name="tariff_main_tab">Asosiy</string>
+
+    <string name="tariff_stat_tab">Hisobotlar</string>
+    <string name="stat_string">Oxirgi operatsiyalar</string>
+    <string name="kk_oo_yyyy">kk.oo.yyyy</string>
+    <string name="_0_00_so_m">+0.00 UZS</string>
+    <string name="_00_00">00:00</string>
+    <string name="tulov">Hisob toʻldirish</string>
+
+    <string name="success">Muvaffaqqiyatli</string>
+    <string name="davom_etish">Davom etish</string>
+    <string name="qaytadan">Qayta urinish</string>
+
+    <!--Camera Fragment-->
+    <string name="tugatish">"Tugatish"</string>
+    <string name="finish">Tugatish</string>
+    <string name="endi_passportingizdan_ro_yxatda_turish_bo_limini_suratga_tushiring">2. Endi pasportingizdan roʻyxatda turish boʻlimini suratga tushiring</string>
+    <string name="suratga_olishda_yuzingiz_va_passportingizni_ramkaga_mos_xolatda_tushiring">3. Suratga olishda yuzingiz va pasportingizni ramkaga mos xolatda tushiring</string>
+    <string name="o_zbek">Oʻzbek tili</string>
+    <string name="rus">Русский язык</string>
+    <string name="krill">Ўзбек тили</string>
+    <string name="tasdiqlash">Tasdiqlash</string>
+    <string name="confirm">Tasdiqlash</string>
+    <string name="job">Ish</string>
+    <string name="close">Yopish</string>
+    <string name="phone_number">Telefon raqami</string>
+    <string name="send">Yuborish</string>
+    <string name="reset_password">Parolni tiklash</string>
+    <string name="enter_new_password">Yangi parolni kiriting</string>
+    <string name="edit">Oʻzgartirish</string>
+    <string name="menu_edit">Oʻzgartirish</string>
+
+    <!--Language Fragment-->
+    <string name="choose_lang">Iltimos, tilni tanlang!</string>
+    <string name="you_can_change">Keyinchalik sozlamalar bo`limidan o`zgartirishingiz mumkin!</string>
+    <string name="set_free">Boʻshliqga chiqish </string>
+    <string name="passport_photo_definition1">Pasport bosh sahifasining fotosurati</string>
+    <string name="passport_photo_definition2">Pasport yashash manzili sahifasi fotosurati</string>
+    <string name="passport_photo_definition3">Pasportni o`zingiz ushlab turgan holatdagi fotosurat</string>
+    <string name="set_not_free">Band holatiga oʻtish</string>
+    <string name="yes_problems">Muammolar</string>
+    <string name="camera_info">Pasportingizni asosiy sahifasini shu ramka asosiga qoʻyib rasmga oling</string>
+    <string name="qaytadan_button">Qaytadan suratga olish</string>
+    <string name="yaxshi_keyingisi">Yaxshi keyingisi</string>
+    <string name="shaxsiy_hisobni">Tarif uchun toʻlov amalga oshiring</string>
+    <string name="saqlash">Saqlash</string>
+
+    <!--Server errors text messages-->
+    <string name="try_after_a_while">Server bilan boʻgʻliq muammo. Birozdan soʻng urinib koʻring.</string>
+    <string name="failure">Xatolik yuz berdi</string>
+    <string name="turn_on_internet">Internetingizni yoqing 😡</string>
+    <string name="enter_your_surname">Familiya va Ismingizni kiriting</string>
+    <string name="entering_password">Parolni kiriting</string>
+    <string name="repeat_your_passord">Parolni qaytadan kiriting</string>
+    <string name="input_phone_number_right">Telefon raqamini toʻgʻri kiriting</string>
+    <string name="incompatible_password">Parollar mos emas</string>
+
+    <!--Dialog notification-->
+    <string name="rad_etish">Rad etish</string>
+    <string name="qabul_qilish">Qabul qilish</string>
+    <string name="dont_enough_money">Hisobda mablagʻ yetarli emas!</string>
+    <string name="changing_language">Tilni oʻzgartirish</string>
+    <string name="menu_logout">Chiqish</string>
+
+    <string name="successfully_message_dialog">Muvaffaqqiyatli</string>
+    <string name="back">Back</string>
+    <string name="image">Image</string>
+    <string name="network_not_available">Network is not available</string>
+    <string name="call_to_worker">Qoʻngʻiroq</string>
+    <string name="takephoto">takePhoto</string>
+    <string name="additional">additional</string>
+    <string name="picturearea">pictureArea</string>
+    <string name="picturebigarea">pictureBigArea</string>
+
+    <!--Dialog delete avatar-->
+    <string name="do_you_want_to_delete_the_avatar">Profil suratingizni oʻchirmoqchimisiz? </string>
+    <string name="yes_dialog">Ha</string>
+    <string name="no_dialog">Yoʻq</string>
+    <string name="make_free">Hozirgi ishni tugatmoqchimisiz ?</string>
+    <string name="_25_second">25 sekund</string>
+    <string name="full_name">Full Name</string>
+    <string name="_14_km">14 km</string>
+    <string name="chaqirilgan_ish_nomi">Chaqirilgan ish nomi</string>
+    <string name="send_image_success">Rasmingiz muvaffaqiyatli yuborildi!</string>
+    <string name="gps_status_enabled">Gps yoqilgan</string>
+    <string name="gps_status_disabled">Gps yoqilmagan</string>
+    <string name="search">Qidirish</string>
+    <string name="no_jobs">Hech narsa topilmadi!</string>
+    <string name="my_jobs">Mening sohalarim</string>
+    <string name="adder_to_clipboard">Toʻlov uchun id xotiraga saqlandi!</string>
+    <string name="change_tariff">Tarif almashtirish</string>
+    <string name="change_tariff_desc">Tarifingizni <b><u>%1$s</u></b> tarifiga oʻzgartirmoqchimisiz? Hisobingizdan <u>%2$s</u> yechib olinadi!</string>
+    <string name="choose_tariff">Tarifga oʻtish</string>
+    <string name="text_progres">Iltimos biroz kuting!</string>
+
+    <string name="code_incorrect">Kiritilgan kod xato</string>
+    <string name="sms_is_not_working">SMS hizmati ishlamayapti</string>
+    <string name="main_screen">Bosh sahifa</string>
+    <string name="title_home">Bosh sahifa</string>
+    <string name="title_orders">Buyurtmalar</string>
+    <string name="title_tariff">Tariflar</string>
+    <string name="sign_up">Ro`yxatdan o`tish</string>
+    <string name="sizda_profil_yo_qmi">Akkauntingiz yo`qmi?</string>
+    <string name="registratsiya_qilish">Registratsiya qilish</string>
+    <string name="tiklash">Tiklash</string>
+    <string name="telefon_raqamingizni_tasdiqlang">Telefon raqamingizni tasdiqlang</string>
+    <string name="telefon_raqamingiz_1_s_ga_sms_kod_yuborildi">Sizning raqamingizga %1$s SMS orqali kod yuborildi</string>
+    <string name="kodni_kiriting">Kodni kiriting</string>
+    <string name="kod_sizga_jo_natilgan">Kod takroran jo`natildi</string>
+    <string name="qayta_jo_natish">Kodni takroran jo`natish</string>
+    <string name="mardex_dasturiga_xush_kelibsiz">MardEx PRO ga xush kelibsiz!</string>
+    <string name="problems1">Faollashtirish uchun shartlarni bajaring</string>
+    <string name="turn_on_gps">Telefoningizda GPS ni yoqing</string>
+    <string name="skip">O`tkazish</string>
+    <string name="free">Bo`shman</string>
+
+    <string name="back_image_button">back_btn_image_desc</string>
+    <string name="logo_image_desc">logo_image_desc</string>
+    <string name="enter_name_surname">Familiyangizni, ismingizni va sharifingizni kiriting</string>
+    <string name="f__i_sh">F.I.SH</string>
+    <string name="enter_phone_number_">Telefon raqamingizni kiriting</string>
+    <string name="enter_password">Parolni kiriting</string>
+    <string name="password_">Parol</string>
+    <string name="confirm_password_">Parolni takrorlang</string>
+    <string name="confirm_hint">Parol</string>
+    <string name="enter_next">Davom ettirish</string>
+    <string name="formatted_mardex_v" translatable="false">MardEx V%1$s</string>
+    <string name="do_you_have_an_account">Akkauntingiz bormi?</string>
+    <string name="sign_in">Kirish ></string>
+    <string name="login_">Kirish</string>
+    <string name="login">MardEx PRO ga kirish</string>
+    <string name="enter_">Kirish</string>
+    <string name="forgot_password_">Parolni unutdingizmi?</string>
+    <string name="restore_password_">Tiklash</string>
+    <string name="enter_password_ba">Parolni kiriting</string>
+    <string name="account_not_available">Akkauntigiz yo`qmi?</string>
+    <string name="go_to_sign_up">Ro`yxatdan o`tish ></string>
+    <string name="choose_your_job">O`zingizni mutaxassisligingizni tanlang</string>
+    <string name="search_new"><b>Qidirish:</b> Bog`bon,arxitektor…</string>
+    <string name="password_hint">******</string>
+    <string name="demanded_photos">Talab qilinadigan rasmlar</string>
+    <string name="after_send_photo">Surat yuborilgandan so`ng moderator tomonidan tekshiruv o`tkaziladi</string>
+    <string name="main_page_passport">Passportning asosiy sahifasi</string>
+    <string name="residence_page">Doimiy ro`yhatda turadigan sahifa qismi</string>
+    <string name="with_passort_photo">Passport bilan o`zingiz suratga tushing</string>
+    <string name="take_photo">Suratga olish</string>
+    <string name="take_photo_profile">Suratga olish</string>
+    <string name="orqaga_back">Orqaga</string>
+    <color name="AppVersionTextColor">#AEB8C5</color>
+    <color name="hint_text_color">#B3BECC</color>
+
+    <string name="choose_your_category">Kategoriyani tanlash</string>
+    <string name="show_all">Hammasini ko`rsatish</string>
+    <string name="choose_jobs">“%1$s” kategoriyasi mutaxassisliklari</string>
+    <string name="choose_jobs_temp">Mutaxassislik kategoriyasi</string>
+    <string name="sample_job">Beton ishchilari</string>
+    <string name="save">Saqlash</string>
+    <string name="name_example">Abduraimov Ismoil Rozmetovich</string>
+    <string name="rating">5.0</string>
+    <string name="activity_sample">25</string>
+    <string name="activity">Aktivlik</string>
+    <string name="ended_sample">15</string>
+    <string name="ended">Tugallangan buyurtmalar</string>
+    <string name="cancelled_sample">5</string>
+    <string name="cancelled">Bekor qilingan buyurtmalar</string>
+
+    <!--List photos type-->
+    <string name="list_of_in_demand_images">Talab qilingan rasmlarning ro`yxati</string>
+    <string name="demand_images">Talab qilingan rasmlarning ro`yxati</string>
+    <string name="desc_photo_send">Suratni yuborganingizdan so`ng, moderatsiya amalga oshiriladi</string>
+    <string name="photo_of_the_main_page_of_the_passport">Pasportning asosiy sahifasi fotosurati</string>
+    <string name="photo_of_the_passport_registration_page">Pasportni propiska sahifasining fotosurati</string>
+    <string name="selfie_with_passport_on_hand">Pasportni qo`lga olgan holatdagi selfi</string>
+    <string name="turn_on_gps_navigation">GPS ni yoqing</string>
+    <string name="complete_balance">Balansingizni to`ldiring</string>
+    <string name="to_activate_follow_the_conditions">Faollashtirish uchun shartlarga rioya qiling</string>
+    <string name="restore_password">Parolni tiklash</string>
+    <string name="desc_send_sms_code">Sizning raqamingizga SMS orqali kod yuboriladi</string>
+    <string name="desc_take_photo">Pasportingizni ramka asosida joylashtirib suratga oling</string>
+    <string name="about_me_">Men haqimda</string>
+    <string name="desc_">So`rov faqat tarmoqdagi ishchilarga yuboriladi</string>
+    <string name="my_balance_">Balans:</string>
+    <string name="temp_id">89464891</string>
+    <string name="id_info">To`lov ID:</string>
+    <string name="temp_balance_">0 UZS</string>
+    <string name="plus_balance">To`ldirish</string>
+    <string name="my_jobs_">Mening mutaxassisligim</string>
+    <string name="add_jobs">Qo`shish</string>
+    <string name="my_photos_">Foto</string>
+    <string name="prev_button">prev button</string>
+    <string name="capture_camera">kamera rasmi</string>
+    <string name="flash_turn_on_flash_button">kamera chirog\'ini yoqish</string>
+    <string name="switch_camera">kamerani almashtirish</string>
+    <string name="confirm_photo_capture">Rasmni tasdiqlang</string>
+    <string name="ok_next_step">Yaxshi, keyingisi</string>
+    <string name="history">Tarix</string>
+    <string name="title_call_dialog_example">Archa daraxtini, eman daraxtini ko`chirib, hovlini bo`yashingiz kerak.</string>
+    <string name="more">Batafsil</string>
+    <string name="dialog_desc_example">Korzinka.uz supermarketlar tarmog\'ining rasmiy veb-saytiga xo’sh kelibsiz! Bizning veb-saytimizga tashrif buyuring va eng so\'nggi yangiliklar va reklama aksiyalaridan xabardor bo\'ling</string>
+    <string name="photo">Foto</string>
+    <string name="cancel">Bekor qilish</string>
+    <string name="accept">Qabul qilish</string>
+    <string name="aktiv_book">Aktiv buyurtma</string>
+    <string name="definition">Ish haqida qisqacha</string>
+    <string name="cost">Narx:</string>
+    <string name="booking_definition">Buyurtma ta`rifi:</string>
+    <string name="picture">Rasm</string>
+    <string name="cancel_string">Bekor qilish</string>
+    <string name="address">Manzil:</string>
+    <string name="map_string">Kartada ko`rish</string>
+    <string name="sending_message">Sizning so`rovingiz yuborildi</string>
+    <string name="access_notification">Siz buyurtmani qabul qilganligingiz haqida bildirishnoma qabul qilasiz</string>
+    <string name="balance_payment">Hisobni to`ldirish</string>
+    <string name="account_string">Sizning ID hisobingiz:</string>
+    <string name="money_string">0,000 so`m</string>
+    <string name="billing_money">To`lanadigan summa</string>
+    <string name="exist_billing">Mavjud to`lov tizimlar</string>
+    <string name="billing_the_account">Hisobni to`ldirish</string>
+    <string name="continue_">Davom etish</string>
+    <string name="second">sek</string>
+    <string name="client">Xaridor:</string>
+    <string name="history_payment">To`lovlar tarixi</string>
+    <string name="from_date">Sanadan</string>
+    <string name="to_date">Sanagacha</string>
+    <string name="orders_screen">Buyurtmalar</string>
+    <string name="fast_orders">Tezkor</string>
+    <string name="orders">Hammasi</string>
+    <string name="active_order">Aktiv buyurtma</string>
+    <string name="job_info">Evro ta`mir qilish kerak. Tekis 70 kvadrat</string>
+    <string name="data">Sana: </string>
+    <string name="category">Kategoriya:</string>
+    <string name="data_temp">06.05.2020</string>
+    <string name="temp_job">Bog’bon</string>
+    <string name="status">Status:</string>
+    <string name="data_status">Bosqichda</string>
+    <string name="requests">So`rovlar:</string>
+    <string name="data_count">15</string>
+    <string name="text_count">(%1$s)</string>
+    <string name="_all">Hammasi</string>
+    <string name="finished_order">Amalga oshirildi</string>
+    <string name="show_more">Ko`proq ko`rsatish</string>
+    <string name="results">Qidiruv natijalari:</string>
+    <string name="choose_from_gallery">Galereyadan rasmni tanlang</string>
+    <string name="_100">100</string>
+    <string name="f_i_sh">Familiya Ism Sharif</string>
+    <string name="add_photo">Rasmlar qo`shish</string>
+    <string name="show_avatar">Tomosha qiling</string>
+    <string name="delete_avatar">O`chirish</string>
+    <string name="change_avatar">O`zgartirish</string>
+    <string name="my_balance">Mening hisobim</string>
+    <string name="orders_menu">Buyurtmalar</string>
+    <string name="news">Yangiliklar</string>
+    <string name="how_to_use">Qanday foydalanish kerak</string>
+    <string name="soft_lang">Dasturning tili</string>
+    <string name="tel">+998 90 549 4994</string>
+    <string name="night_mode">Tungi rejim</string>
+    <string name="simple_tariffs">Tariflar</string>
+    <string name="_5_000">5.000 so`m</string>
+    <string name="activate">Tanlash</string>
+    <string name="your_tariff">Sizning tarifingiz</string>
+    <string name="count_top">Top: %1$s marta</string>
+    <string name="count_call">Chaqiruv: %1$s marta</string>
+    <string name="count_view">Post: %1$s marta</string>
+    <string name="premium_tariff">Premium tarifi</string>
+    <string name="activate_tariff">Tarif faollashtirilsinmi?</string>
+    <string name="your_balance">Sizning hisobingiz:</string>
+    <string name="_balance">7.500 so`m</string>
+    <string name="your_balance_error">Hisobingizda mablag` yetarli emas. Iltimos, hisobingizni to`ldiring</string>
+
+    <string name="_1_d_soniyadan_keyin_qayta_harakat_qilib_ko_ring">%1$d soniyadan keyin qayta harakat qilib ko`ring</string>
+    <string name="choose_language">Tilni tanlang:</string>
+    <string name="alert">Diqqat</string>
+    <string name="gps_is_not_enabled">GPS yoqilmagan ekan. Sozlamarga o`tib yoqishingizni so`raymiz!</string>
+    <string name="retry_photo">Takroran suratga olish</string>
+    <string name="phone_number_">Telefon raqamingiz</string>
+    <string name="personal_data">Shaxsiy ma`lumotlar</string>
+    <string name="edit_phone_number">Telefon raqamini o`zgartirish</string>
+    <string name="sms_send_code">Sizning telefon raqamingizga SMS orqali kod jo`natiladi.</string>
+    <string name="about_you">O`zingiz haqingizda ma`lumot</string>
+    <string name="example_desc">Masalan: 5 yillik qurilish tajribasi.</string>
+    <string name="unfree">Bo`sh emasman</string>
+    <string name="top">Top</string>
+    <string name="call">Qo`ng`iroq</string>
+    <string name="post">Post</string>
+    <string name="hide">Yopish</string>
+    <string name="_0">0</string>
+    <string name="warning">Eslatma!</string>
+    <string name="warning_content">Birdaniga 5 tadan ortiq kasb qo\'sha olmaysiz!</string>
+    <string name="warning_ok">Tushunarli</string>
+    <string name="log_out">Chiqish</string>
+    <string name="log_out_content">Profilingizdan chiqishni istaysizmi?</string>
+    <string name="logout_cancel">Bekor qilish</string>
+    <string name="change_password">Parol o\'zgartirish</string>
+    <string name="old_password">Eski parol</string>
+    <string name="new_password">Yangi parol</string>
+    <string name="enter_new_password_again">Yangi parolni kiriting</string>
+    <string name="incorrect_phone_number">Telefon raqam yoki parol xato kiritildi!</string>
+    <string name="promo">Promokodni kiriting (mavjud bo`lsa)</string>
+    <string name="promo_hint">Promokod</string>
+    <string name="error_change_password">Ma\'lumot to\'liq emas. Iltimos, barcha ma\'lumotlarni to\'ldiring!</string>
+    <string name="passwords_error">Parollar mos emas!</string>
+    <string name="password_changed">Parol muvaffaqiyatli o\'zgartirildi!</string>
+    <string name="password_error2">Joriy parol xato kiritildi!</string>
+    <string name="change_language">Tilni o\'zgartirish</string>
+    <string name="duplicat_key">Ushbu telefon raqam bilan oldin ro\'yhatdan o\'tilgan!</string>
+    <string name="user_not_found">Ushbu telefon raqam bilan oldin ro\'yhatdan o\'tilmagangan!</string>
+    <string name="fill_full_name">To\'liq ism, familiyangizni kiriting</string>
+    <string name="finish_current_order">Bo`shliqga chiqishdan oldin joriy ishingizni tugating!</string>
+    <string name="soon">Ishlash jarayonida</string>
+    <string name="_1">(1)</string>
+    <string name="_000">(0)</string>
+    <string name="payment_income">%1$s orqali to`lov</string>
+    <string name="payment_outcome">Tarif uchun to`lov</string>
+    <string name="news_notification">Xabarlar</string>
+    <string name="notification_time">15.02.2021 15:35</string>
+    <string name="empty">Hurmatli foydalanuvchi, ayni vaqtda xabarlar mavjud emas</string>
+
+    <string name="default_notification_channel_id" translatable="false">NOTIFICATION CHANNEL FOR NOTIFICATION</string>
+    <string name="share">Dasturni ulashish</string>
+    <string name="notification_fail">Ishni qabul qilishga ulgurmadingiz! Keyingi so`rovlarda faolroq bo`ling!</string>
+    <string name="token_expire" translatable="false">Your token has expire!</string>
+    <string name="_20">20</string>
+    <string name="agree_policy">Ommaviy ofertaga roziman</string>
+    <string name="check_policy">Davom etish uchun Ommaviy ofertaga rozi bo`ling!</string>
+    <string name="policy">Ommaviy oferta</string>
+    <string name="policy_line"><u>Ommaviy oferta</u></string>
+    <string name="t_call">Call-center</string>
+    <string name="_998_93_000_88_55" translatable="false">+998 93 000 88 55</string>
+    <string name="_998_93_000_88_55_call" translatable="false">+998930008855</string>
+    <string name="mardex_uz" translatable="false">mardex.uz</string>
+    <string name="t_site">Bizning sayt</string>
+    <string name="call_count_is_null">Tarif bo`yicha imkoniyatlaringiz tugadi. Tarifni takror faollashtiring!</string>
+    <string name="promocode_text">Promokodni kiriting</string>
+    <string name="enter_promocode_and_get_price">Promokodni kiriting va bonuslarga ega bo\'ling.</string>
+    <string name="xxx_xxx" translatable="false">XXX XXX</string>
+    <string name="error_promocode">Promokod xato</string>
+    <string name="success_promo">Promokod tasdiqlandi.</string>
+    <string name="promocode_used">Promokod sizda faollashtirilgan.</string>
+    <string name="_00000" translatable="false">00000</string>
+    <string name="internet_slow">Internet tezligi past. Qayta urinib ko’ring</string>
+    <string name="channel_name" translatable="false">Notification channel</string>
+    <string name="channel_description" translatable="false">for show notification</string>
+    <string name="choose_region">Viloyatni tanlang:</string>
+    <string name="choose_region_">Viloyatni tanlang</string>
+    <string name="select_an_option">Tanlanmadi</string>
+    <string name="choose_city">Tumanni tanlang:</string>
+    <string name="choose_city_">Tumanni tanlang</string>
+    <string name="man">Erkak</string>
+    <string name="woman">Ayol</string>
+    <string name="gender">Jinsingiz:</string>
+    <string name="please_confirm_permission">Buyurtma olish imkoniyatiga ega bo\'lish uchun \"Boshqa ilovalar ustiga qo\'yish\" xususiyatini yoqish zarur!</string>
+    <string name="pop_up_dialog">Qalqib chiquvchi oyna</string>
+
+</resources>

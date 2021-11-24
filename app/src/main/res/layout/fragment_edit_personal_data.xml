@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_white_and_black"
+    tools:context=".ui.screen.main_activity.edit_personal_data_fragment.EditPersonalDataFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            style="@style/ClickableImageViewStyle"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_title"
+            style="@style/TextTitleEditFragmentStyle"
+            android:text="@string/personal_data"
+            app:layout_constraintStart_toStartOf="@+id/btn_back"
+            app:layout_constraintTop_toBottomOf="@+id/btn_back" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_desc_name"
+            style="@style/TextDescEditFragmentStyle"
+            android:layout_width="0dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@string/enter_name_surname"
+            app:layout_constraintLeft_toLeftOf="@+id/txt_title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_full_name"
+            style="@style/CardVETEditFragmentStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintStart_toStartOf="@+id/txt_desc_name"
+            app:layout_constraintTop_toBottomOf="@+id/txt_desc_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_full_name"
+                style="@style/EditTextEditFragmentStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/f__i_sh"
+                android:singleLine="true"
+                android:textAppearance="@style/TextMedium" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_description_hint"
+            style="@style/TextDescEditFragmentStyle"
+            android:text="@string/about_you"
+            app:layout_constraintStart_toStartOf="@+id/txt_title"
+            app:layout_constraintTop_toBottomOf="@+id/cv_full_name" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_description"
+            style="@style/CardVETEditFragmentStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintStart_toStartOf="@+id/txt_desc_name"
+            app:layout_constraintTop_toBottomOf="@+id/txt_description_hint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_description"
+                style="@style/EditTextEditFragmentStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/example_desc"
+                android:singleLine="false"
+                android:textAppearance="@style/TextMedium" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save_personal_data"
+            style="@style/ButtonNextStyle"
+            android:drawableEnd="@drawable/ic_arrow_white"
+            android:text="@string/save"
+            app:backgroundTint="@color/new_green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

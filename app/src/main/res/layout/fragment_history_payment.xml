@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/back_white_and_black"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back_button"
+            style="@style/PopToBackImageViewStyle"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textHistoryPayment"
+            style="@style/TextTitleSignUpStyle"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:maxLines="2"
+            android:text="@string/history_payment"
+            app:layout_constraintLeft_toLeftOf="@+id/back_button"
+            app:layout_constraintTop_toBottomOf="@+id/back_button" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/textHistoryPayment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textHistoryPayment"
+            app:layout_constraintTop_toTopOf="@id/textHistoryPayment">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fromDateButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:text="@string/from_date"
+                android:textAllCaps="false"
+                android:textColor="@color/hintColor"
+                android:textSize="@dimen/_9ssp"
+                app:cornerRadius="@dimen/_10sdp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/toDateButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:text="@string/to_date"
+                android:textAllCaps="false"
+                android:textColor="@color/hintColor"
+                android:textSize="@dimen/_9ssp"
+                app:cornerRadius="@dimen/_10sdp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_payments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutAnimation="@anim/layout_animation"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:padding="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textHistoryPayment"
+            tools:itemCount="10"
+            tools:listitem="@layout/item_stat" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

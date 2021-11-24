@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/dialog_background"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/takePhotoButton"
+            style="@style/TextMedium"
+            android:layout_width="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/take_photo_profile" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/hintColor" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/takeFromGalleryButton"
+            style="@style/TextMedium"
+            android:layout_width="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/choose_from_gallery" />
+    </LinearLayout>
+
+</FrameLayout>

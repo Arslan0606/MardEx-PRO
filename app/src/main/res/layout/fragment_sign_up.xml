@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            style="@style/PopToBackImageViewStyle"
+            android:contentDescription="@string/back_image_button"
+            android:src="@drawable/ic_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_logo_worker"
+            style="@style/LogoMardexImageStyle"
+            android:contentDescription="@string/logo_image_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--ttt-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_signUp_title"
+            style="@style/TextTitleSignUpStyle"
+            android:text="@string/sign_up"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_logo_worker" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_full_name_title"
+            style="@style/TextMiddleTitlePhoneSignUpStyle"
+            android:text="@string/enter_name_surname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_signUp_title" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_et_full_name"
+            style="@style/InputEditTextCardViewStyle"
+            android:backgroundTint="@color/jobs_item_color"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_full_name_title">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ll_full_name"
+                style="@style/InputEditTextLayoutStyle"
+                android:hint="@string/f__i_sh"
+                app:startIconDrawable="@drawable/ic_person"
+                app:startIconTint="@null">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_full_name"
+                    style="@style/InputMaskedEditTextFullNameStyle"
+                    android:backgroundTint="@color/jobs_item_color"
+                    android:importantForAutofill="no" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_phone_title"
+            style="@style/TextMiddleTitlePhoneSignUpStyle"
+            android:text="@string/enter_phone_number_"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_et_full_name" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_et_phone"
+            style="@style/InputEditTextCardViewStyle"
+            android:backgroundTint="@color/jobs_item_color"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_phone_title">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ll_et_phone"
+                style="@style/InputEditTextLayoutStyle"
+                android:hint="@string/phone_number_"
+                app:startIconDrawable="@drawable/ic_phone"
+                app:startIconTint="@null">
+
+                <br.com.sapereaude.maskedEditText.MaskedEditText
+                    android:id="@+id/et_phone"
+                    style="@style/InputMaskedEditTextPhoneStyle"
+                    android:backgroundTint="@color/jobs_item_color"
+                    android:importantForAutofill="no" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_password_title"
+            style="@style/TextMiddleTitlePhoneSignUpStyle"
+            android:text="@string/enter_password"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_et_phone" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_et_password"
+            style="@style/InputEditTextCardViewStyle"
+            android:backgroundTint="@color/jobs_item_color"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_password_title">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ll_et_password"
+                style="@style/InputEditTextLayoutStyle"
+                android:hint="@string/password_"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/eye_grey"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:startIconTint="@null">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_password"
+                    style="@style/InputMaskedEditTextFullNameStyle"
+                    android:backgroundTint="@color/jobs_item_color"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_confirm_password_title"
+            style="@style/TextMiddleTitlePhoneSignUpStyle"
+            android:text="@string/confirm_password_"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_et_password" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_et_confirm_password"
+            style="@style/InputEditTextCardViewStyle"
+            android:backgroundTint="@color/jobs_item_color"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_confirm_password_title">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ll_et_confirm_password"
+                style="@style/InputEditTextLayoutStyle"
+                android:hint="@string/confirm_hint"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/eye_grey"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:startIconTint="@null">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_confirm_password"
+                    style="@style/InputMaskedEditTextFullNameStyle"
+                    android:backgroundTint="@color/jobs_item_color"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_region"
+            style="@style/TextMiddleTitlePhoneSignUpStyle"
+            android:text="@string/choose_region"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_et_confirm_password" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_et_region"
+            style="@style/InputEditTextCardViewStyle"
+            android:backgroundTint="@color/jobs_item_color"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_region">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/temp_region"
+                style="@style/InputEditTextLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_gravity="start"
+                android:clickable="false"
+                app:passwordToggleDrawable="@drawable/ic_drop_down"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/eye_grey"
+                app:startIconTint="@null" />
+
+            <LinearLayout
+                android:id="@+id/btn_region"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ll_region"
+                    style="@style/InputEditTextLayoutStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="start"
+                    app:startIconDrawable="@drawable/ic_location"
+                    app:startIconTint="@null" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinner_region"
+                    style="@style/InputMaskedEditTextFullNameStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_50sdp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/jobs_item_color"
+                    android:clickable="false"
+                    android:ellipsize="marquee"
+                    android:gravity="start"
+                    android:prompt="@string/select_an_option"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="textStart" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_city"
+            style="@style/TextMiddleTitlePhoneSignUpStyle"
+            android:text="@string/choose_city"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_et_region" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_et_city"
+            style="@style/InputEditTextCardViewStyle"
+            android:backgroundTint="@color/jobs_item_color"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_city">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/temp_city"
+                style="@style/InputEditTextLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_gravity="start"
+                android:clickable="false"
+                app:passwordToggleDrawable="@drawable/ic_drop_down"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/eye_grey"
+                app:startIconTint="@null" />
+
+            <LinearLayout
+                android:id="@+id/btn_city"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ll_city"
+                    style="@style/InputEditTextLayoutStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="start"
+                    app:startIconDrawable="@drawable/ic_location"
+                    app:startIconTint="@null" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinner_city"
+                    style="@style/InputMaskedEditTextFullNameStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_50sdp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/jobs_item_color"
+                    android:clickable="false"
+                    android:ellipsize="marquee"
+                    android:gravity="start"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="textStart" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_gender"
+            style="@style/TextMiddleTitlePhoneSignUpStyle"
+            android:text="@string/gender"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_et_city" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_et_gender"
+            style="@style/InputEditTextCardViewStyle"
+            android:backgroundTint="@color/jobs_item_color"
+            android:padding="0dp"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_gender">
+
+            <LinearLayout
+                style="@style/InputEditTextLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="0dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/bg_man"
+                    style="@style/InputEditTextCardViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    app:cardElevation="0dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/text_man"
+                        style="@style/InputMaskedEditTextFullNameStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/new_green"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/ic_man_white"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_6sdp"
+                        android:paddingEnd="@dimen/_20sdp"
+                        android:paddingBottom="@dimen/_6sdp"
+                        android:text="@string/man"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/bg_woman"
+                    style="@style/InputEditTextCardViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    app:cardElevation="0dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/text_woman"
+                        style="@style/InputMaskedEditTextFullNameStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/ic_woman_black"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_6sdp"
+                        android:paddingEnd="@dimen/_20sdp"
+                        android:paddingBottom="@dimen/_6sdp"
+                        android:text="@string/woman"
+                        android:textColor="@color/text_number_color" />
+
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_promo"
+            style="@style/TextMiddleTitlePhoneSignUpStyle"
+            android:text="@string/promo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_et_gender" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_et_promo"
+            style="@style/InputEditTextCardViewStyle"
+            android:backgroundTint="@color/jobs_item_color"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_promo">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ll_et_promo"
+                style="@style/InputEditTextLayoutStyle"
+                android:hint="@string/promo_hint">
+
+                <br.com.sapereaude.maskedEditText.MaskedEditText
+                    android:id="@+id/et_promo"
+                    style="@style/InputMaskedEditTextPhoneStyle"
+                    android:backgroundTint="@color/jobs_item_color"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    app:mask="# - # - # - #" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_policy"
+            style="@style/TextMiddleTitlePhoneSignUpStyle"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/policy_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_et_promo" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkbox_confirm_policy"
+            style="@style/TextMiddleTitlePhoneSignUpStyle"
+            android:layout_width="0dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/agree_policy"
+            android:textAppearance="@style/TextMiddleTitlePhoneSignUpStyle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/cv_et_promo"
+            app:layout_constraintTop_toBottomOf="@+id/txt_policy" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            style="@style/ButtonNextStyle"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:drawableEnd="@drawable/ic_arrow_white"
+            android:text="@string/next"
+            app:backgroundTint="@color/new_green"
+            app:cornerRadius="@dimen/_20sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkbox_confirm_policy" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_title_if_your_account"
+            style="@style/IfYourAccountAvailableSignUpStyle"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/do_you_have_an_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_next" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/btn_go_login"
+            style="@style/TextMedium"
+            android:background="?selectableItemBackground"
+            android:text="@string/sign_in"
+            android:textColor="@color/new_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title_if_your_account" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_version"
+            style="@style/AppVersionTextStyleIntro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/formatted_mardex_v"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_go_login" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
